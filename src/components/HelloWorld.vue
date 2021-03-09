@@ -76,7 +76,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-container fluid>
+    <v-container>
       <v-row>
         <v-col>
           <v-row class="intro mainIntro"><p>Projects</p></v-row>

@@ -1,7 +1,7 @@
 <template>
-  <div id="apps">
+  <v-app id="apps" class="appBackground">
     <HelloWorld />
-  </div>
+  </v-app>
 </template>
 
 <script>
@@ -24,9 +24,8 @@ export default {
 #apps {
   background-color: black;
   background-image: url("~@/assets/drawing-1.svg");
-
   background-position: right;
-  background-size: 50%;
+  background-size: 100%;
   background-position-y: top;
 }
 </style>
