@@ -1,58 +1,409 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="font container">
+    <!-- <img class="blob" src="../assets/drawing-2.svg"> -->
+    <!-- <div class="blobMiniContainer">
+      <img class="blobMini" src="../assets/blob3.svg" />
+      <img class="blobMini2" src="../assets/blob1.svg" />
+      <img class="blobMini3" src="../assets/blob2.svg" />
+      <img class="blobMini4" src="../assets/blob5.svg" />
+    </div> -->
+    <div class="d-none d-md-block">
+      <v-row>
+        <v-col class="introContainer">
+          <div
+            class="intro animate__animated animate__fadeOutUp animate__delay-5s"
+            v-show="showIntro"
+            :height="height"
+          >
+            <div>
+              <v-row
+                class="animate__animated animate__fadeOutUp animate__delay-5s "
+              >
+                <v-col>
+                  <p class="hello">Hello</p>
+                </v-col>
+                <v-col>
+                  <p
+                    class="emoji animate__animated animate__wobble animate__delay-0.5s"
+                  >
+                    👋
+                  </p>
+                </v-col>
+              </v-row>
+            </div>
+            <p
+              class="mainIntro animate__animated animate__fadeIn animate__delay-0.75s"
+            >
+              My name is Aram Balayan
+            </p>
+            <p
+              class="secondaryIntro animate__animated animate__fadeIn animate__delay-2s"
+            >
+              and I like to code.
+            </p>
+          </div>
+          <div class="intro" v-show="!showIntro">
+            <p
+              class="mainIntro animate__animated animate__fadeInDown animate__delay-0.5s"
+            >
+              Aram Balayan
+            </p>
+            <p
+              class="secondaryIntro animate__animated animate__fadeInDown animate__delay-0.5s"
+            >
+              Software Engineer
+            </p>
+          </div>
+        </v-col>
+        <v-col>
+          <div class="contact intro">
+            <p>
+              <a
+                class="contact font"
+                id="myEmail"
+                href="mailto:arambalayan1@gmail.com"
+                value="arambalayan1@gmail.com"
+                >arambalayan1@gmail.com
+              </a>
+              <v-btn
+                @click="copyToClipboard('arambalayan1@gmail.com')"
+                color="black"
+                elevation="2"
+              >
+                <span class="font">Copy to clipboard</span>
+              </v-btn>
+            </p>
+            <p>
+              GitHub:
+              <a class="contact font" href="https://www.github.com/aram392"
+                >aram392</a
+              >
+            </p>
+          </div>
+        </v-col>
+      </v-row>
+      <v-row> </v-row>
+
+      <v-row>
+        <v-col>
+          <div class="intro mainIntro"><p>Projects</p></div>
+
+          <div class="project font">
+            <v-card outlined color="#3949ab" shaped>
+              <v-row class="font">
+                <v-col>
+                  <p class="projectDescription" v-show="!hoverNotify">
+                    Technologies used
+                  </p>
+                  <p
+                    class="projectDescription animate__animated animate__shakeY animate__slower"
+                    v-show="hoverNotify"
+                  >
+                    👇 Hover Over Me 👇
+                  </p>
+                  <ul class="iconContainer">
+                    <il v-for="icon in project1" :key="icon">
+                      <v-tooltip
+                        bottom
+                        color="pink"
+                        offset-overflow="true"
+                        max-width="400px"
+                        size="50px"
+                        nudge-bottom="30"
+                      >
+                        <template v-slot:activator="{ on, attrs }">
+                          <span class="hvr-pulse" v-bind="attrs" v-on="on">
+                            <img
+                              class="tech-icon"
+                              v-bind:src="
+                                require('@/assets/project1/' + icon.filename)
+                              "
+                          /></span>
+                        </template>
+                        <span>{{ icon.label }}</span>
+                      </v-tooltip>
+                    </il>
+                  </ul>
+                </v-col>
+                <v-col>
+                  <p class="projectDescription">PlaceHolder Title</p>
+                  <p>Project description here</p>
+                  <p>blah blah blah</p>
+                </v-col>
+                <v-col>
+                  <p class="projectDescription">Showcase</p>
+                  <p>Project description here</p>
+                  <p>blah blah blah</p></v-col
+                >
+              </v-row>
+            </v-card>
+          </div>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <div class="intro mainIntro"><p>Cool Things</p></div>
+        </v-col>
+      </v-row>
+    </div>
+    <div></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
+  name: "HelloWorld",
+  components: {},
+  methods: {
+    copyToClipboard(text) {
+      var dummy = document.createElement("textarea");
+      // to avoid breaking orgain page when copying more words
+      // cant copy when adding below this code
+      // dummy.style.display = 'none'
+      document.body.appendChild(dummy);
+      //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
+      dummy.value = text;
+      dummy.select();
+      document.execCommand("copy");
+      document.body.removeChild(dummy);
+    },
+  },
+  computed: {
+    height() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return 220;
+        case "sm":
+          return 400;
+        case "md":
+          return 500;
+        case "lg":
+          return 600;
+        case "xl":
+          return 800;
+      }
+    },
+  },
+  data() {
+    return {
+      showIntro: true,
+      hoverNotify: false,
+      project1: [
+        {
+          filename: "go.png",
+          label:
+            "Golang was used for creating RESTful services. This includes all features relating to login, account creation, password recovery and site content.",
+        },
+        {
+          filename: "vue.png",
+          label:
+            "Vue.js was chosen since I am firmiliar with this framework. It allowed me to spend more time building backend services.",
+        },
+        {
+          filename: "docker.png",
+          label:
+            "Docker was used for containerization of microservices. It allows services to run decoupled and services can be created independently.",
+        },
+        {
+          filename: "postgres.png",
+          label:
+            "Postgres was used since it is a great open source database management tool.",
+        },
+        {
+          filename: "python.svg",
+          label: "Python",
+        },
+      ],
+      project2: [
+        {
+          filename: "go.png",
+          label:
+            "Golang was used for backend services as it has a robust support for creating RESTful services and building out large applications with ease.",
+        },
+        { filename: "vue.png", label: "Vue.js" },
+        {
+          filename: "docker.png",
+          label:
+            "Docker was used for containerization of microservices. It allows services to run decoupled and services can be created independently.",
+        },
+        {
+          filename: "postgres.png",
+          label:
+            "Postgres was used since it is a great open source database management tool.",
+        },
+        {
+          filename: "nuclino.png",
+          label:
+            "Nuclino was used to organize features of services and provide documentation for endpoints.",
+        },
+      ],
+    };
+  },
+  created() {
+    setTimeout(() => (this.showIntro = false), 6000);
+    setTimeout(() => (this.hoverNotify = true), 6000);
+    setTimeout(() => (this.hoverNotify = false), 12000);
+  },
+};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.backgroundImage {
+  background-image: url("~@/assets/drawing-1.svg");
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.tech-icon {
+  max-height: 5rem;
+  max-width: 5rem;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.blob {
+  position: absolute;
+  height: 100vh;
+  min-height: 400px;
+  top: 0;
+  right: 0;
 }
-a {
-  color: #42b983;
+
+.intro {
+  margin: 2rem;
+  text-align: center;
 }
+.projectDescription {
+  margin: 2rem;
+  font-size: 150%;
+  text-align: center;
+}
+
+.v-tooltip__content {
+  font-size: 150% !important;
+  opacity: 1 !important;
+  font-family: "Nunito", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: beige;
+  text-shadow: 1px 1px 5px black;
+}
+
+.contact {
+  text-align: right;
+  text-decoration: none;
+  font-size: 150%;
+}
+
+.introContainer {
+  height: 16rem;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.mainIntro {
+  font-size: 250%;
+}
+.secondaryIntro {
+  font-size: 250%;
+}
+.hello {
+  font-size: 250%;
+  text-align: right;
+}
+.emoji {
+  font-size: 300%;
+  width: 2rem;
+}
+
+.project {
+  height: 20rem;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+.font {
+  font-family: "Nunito", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: beige;
+  text-shadow: 1px 1px 5px black;
+}
+
+/* .blobMiniContainer {
+  position: absolute;
+  top: 0px;
+}
+
+.blobMini {
+  z-index: 0;
+  height: 13vh;
+
+  animation: floating 300s infinite alternate;
+}
+.blobMini2 {
+  z-index: 0;
+
+  height: 12vh;
+
+  animation: floating2 300s infinite alternate;
+}
+.blobMini3 {
+  z-index: 0;
+
+  height: 10vh;
+
+  animation: floating3 300s infinite alternate;
+}
+.blobMini4 {
+  z-index: 0;
+
+  height: 11vh;
+
+  animation: floating4 300s infinite alternate;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(90vh, 30vh);
+  }
+  50% {
+    transform: translate(70vh, 45vh);
+  }
+  100% {
+    transform: translate(80vh, 0vh);
+  }
+}
+
+@keyframes floating2 {
+  0% {
+    transform: translate(25vh, 80vh);
+  }
+  50% {
+    transform: translate(30vh, 60vh);
+  }
+  100% {
+    transform: translate(70vh, 90vh);
+  }
+}
+@keyframes floating3 {
+  0% {
+    transform: translate(10vh, 10vh);
+  }
+  50% {
+    transform: translate(30vh, 60vh);
+  }
+  100% {
+    transform: translate(70vh, 90vh);
+  }
+}
+@keyframes floating4 {
+  0% {
+    transform: translate(88vh, 10vh);
+  }
+  50% {
+    transform: translate(10vh, 50vh);
+  }
+  100% {
+    transform: translate(70vh, 90vh);
+  }
+} */
 </style>
