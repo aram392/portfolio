@@ -1,15 +1,8 @@
 <template>
-  <div class="font container">
-    <!-- <img class="blob" src="../assets/drawing-2.svg"> -->
-    <!-- <div class="blobMiniContainer">
-      <img class="blobMini" src="../assets/blob3.svg" />
-      <img class="blobMini2" src="../assets/blob1.svg" />
-      <img class="blobMini3" src="../assets/blob2.svg" />
-      <img class="blobMini4" src="../assets/blob5.svg" />
-    </div> -->
-    <div class="d-none d-md-block">
+  <div class="font">
+    <v-container fluid>
       <v-row>
-        <v-col class="introContainer">
+        <v-col class="introContainer backgroundImage">
           <div
             class="intro animate__animated animate__fadeOutUp animate__delay-5s"
             v-show="showIntro"
@@ -82,71 +75,79 @@
           </div>
         </v-col>
       </v-row>
-      <v-row> </v-row>
-
+    </v-container>
+    <v-container fluid>
       <v-row>
         <v-col>
-          <div class="intro mainIntro"><p>Projects</p></div>
+          <v-row class="intro mainIntro"><p>Projects</p></v-row>
 
-          <div class="project font">
-            <v-card outlined color="#3949ab" shaped>
-              <v-row class="font">
-                <v-col>
-                  <p class="projectDescription" v-show="!hoverNotify">
-                    Technologies used
-                  </p>
-                  <p
-                    class="projectDescription animate__animated animate__shakeY animate__slower"
-                    v-show="hoverNotify"
+          <v-row class="project font" justify="center">
+            <v-col justify-center>
+              <v-card outlined color="#3949ab" shaped>
+                <v-row class="font">
+                  <v-col>
+                    <p class="projectDescription" v-show="!hoverNotify">
+                      Technologies used
+                    </p>
+                    <p
+                      class="projectDescription animate__animated animate__shakeY animate__slower"
+                      v-show="hoverNotify"
+                    >
+                      👇 Hover Over Me 👇
+                    </p>
+                    <ul class="iconContainer">
+                      <il v-for="icon in project1" :key="icon">
+                        <v-tooltip
+                          bottom
+                          color="pink"
+                          offset-overflow="true"
+                          max-width="400px"
+                          size="50px"
+                          nudge-bottom="30"
+                        >
+                          <template v-slot:activator="{ on, attrs }">
+                            <span class="hvr-pulse" v-bind="attrs" v-on="on">
+                              <img
+                                class="tech-icon"
+                                v-bind:src="
+                                  require('@/assets/project1/' + icon.filename)
+                                "
+                            /></span>
+                          </template>
+                          <span>{{ icon.label }}</span>
+                        </v-tooltip>
+                      </il>
+                    </ul>
+                  </v-col>
+                  <v-col>
+                    <p class="projectDescription">PlaceHolder Title</p>
+                    <p>Project description here</p>
+                    <p>blah blah blah</p>
+                  </v-col>
+                  <v-col>
+                    <p class="projectDescription">Showcase</p>
+                    <p>Project description here</p>
+                    <p>blah blah blah</p></v-col
                   >
-                    👇 Hover Over Me 👇
-                  </p>
-                  <ul class="iconContainer">
-                    <il v-for="icon in project1" :key="icon">
-                      <v-tooltip
-                        bottom
-                        color="pink"
-                        offset-overflow="true"
-                        max-width="400px"
-                        size="50px"
-                        nudge-bottom="30"
-                      >
-                        <template v-slot:activator="{ on, attrs }">
-                          <span class="hvr-pulse" v-bind="attrs" v-on="on">
-                            <img
-                              class="tech-icon"
-                              v-bind:src="
-                                require('@/assets/project1/' + icon.filename)
-                              "
-                          /></span>
-                        </template>
-                        <span>{{ icon.label }}</span>
-                      </v-tooltip>
-                    </il>
-                  </ul>
-                </v-col>
-                <v-col>
-                  <p class="projectDescription">PlaceHolder Title</p>
-                  <p>Project description here</p>
-                  <p>blah blah blah</p>
-                </v-col>
-                <v-col>
-                  <p class="projectDescription">Showcase</p>
-                  <p>Project description here</p>
-                  <p>blah blah blah</p></v-col
-                >
-              </v-row>
-            </v-card>
-          </div>
+                </v-row>
+              </v-card>
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
+
       <v-row>
         <v-col>
           <div class="intro mainIntro"><p>Cool Things</p></div>
+
+          <v-card>hello</v-card>
+          <v-card>hello</v-card>
+          <v-card>hello</v-card>
+          <v-card>hello</v-card>
+          <v-card>hello</v-card>
         </v-col>
       </v-row>
-    </div>
-    <div></div>
+    </v-container>
   </div>
 </template>
 
@@ -248,9 +249,6 @@ export default {
 </script>
 
 <style scoped>
-.backgroundImage {
-  background-image: url("~@/assets/drawing-1.svg");
-}
 .tech-icon {
   max-height: 5rem;
   max-width: 5rem;
@@ -293,6 +291,9 @@ export default {
 .introContainer {
   height: 16rem;
 }
+.content {
+  margin: 1rem;
+}
 
 .iconContainer {
   display: flex;
@@ -316,6 +317,10 @@ export default {
 
 .project {
   height: 20rem;
+  margin-top: 2rem;
+}
+
+.container {
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
@@ -327,83 +332,4 @@ export default {
   color: beige;
   text-shadow: 1px 1px 5px black;
 }
-
-/* .blobMiniContainer {
-  position: absolute;
-  top: 0px;
-}
-
-.blobMini {
-  z-index: 0;
-  height: 13vh;
-
-  animation: floating 300s infinite alternate;
-}
-.blobMini2 {
-  z-index: 0;
-
-  height: 12vh;
-
-  animation: floating2 300s infinite alternate;
-}
-.blobMini3 {
-  z-index: 0;
-
-  height: 10vh;
-
-  animation: floating3 300s infinite alternate;
-}
-.blobMini4 {
-  z-index: 0;
-
-  height: 11vh;
-
-  animation: floating4 300s infinite alternate;
-}
-
-@keyframes floating {
-  0% {
-    transform: translate(90vh, 30vh);
-  }
-  50% {
-    transform: translate(70vh, 45vh);
-  }
-  100% {
-    transform: translate(80vh, 0vh);
-  }
-}
-
-@keyframes floating2 {
-  0% {
-    transform: translate(25vh, 80vh);
-  }
-  50% {
-    transform: translate(30vh, 60vh);
-  }
-  100% {
-    transform: translate(70vh, 90vh);
-  }
-}
-@keyframes floating3 {
-  0% {
-    transform: translate(10vh, 10vh);
-  }
-  50% {
-    transform: translate(30vh, 60vh);
-  }
-  100% {
-    transform: translate(70vh, 90vh);
-  }
-}
-@keyframes floating4 {
-  0% {
-    transform: translate(88vh, 10vh);
-  }
-  50% {
-    transform: translate(10vh, 50vh);
-  }
-  100% {
-    transform: translate(70vh, 90vh);
-  }
-} */
 </style>
