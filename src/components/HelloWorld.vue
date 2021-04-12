@@ -1,5 +1,5 @@
 <template>
-  <div class="font container">
+  <div class="font">
     <!-- <img class="blob" src="../assets/drawing-2.svg"> -->
     <!-- <div class="blobMiniContainer">
       <img class="blobMini" src="../assets/blob3.svg" />
@@ -7,17 +7,16 @@
       <img class="blobMini3" src="../assets/blob2.svg" />
       <img class="blobMini4" src="../assets/blob5.svg" />
     </div> -->
-    <div class="d-none d-md-block">
-      <v-row>
-        <v-col class="introContainer">
-          <div
-            class="intro animate__animated animate__fadeOutUp animate__delay-5s"
+    
+
+    <!-- <v-container fluid>
+      <v-row class="mt-10" justify="space-around">
+        <v-col class="introContainer" cols="4" sm="12">
+              <v-row
+                
+                   class="intro animate__animated animate__fadeOutUp animate__delay-4s"
             v-show="showIntro"
             :height="height"
-          >
-            <div>
-              <v-row
-                class="animate__animated animate__fadeOutUp animate__delay-5s "
               >
                 <v-col>
                   <p class="hello">Hello</p>
@@ -30,62 +29,73 @@
                   </p>
                 </v-col>
               </v-row>
-            </div>
+        
             <p
               class="mainIntro animate__animated animate__fadeIn animate__delay-0.75s"
+                 v-show="showIntro"
+            :height="height"
             >
-              My name is Aram Balayan
+              My name is Aram
             </p>
             <p
               class="secondaryIntro animate__animated animate__fadeIn animate__delay-2s"
+                 v-show="showIntro"
+            :height="height"
             >
               and I like to code.
             </p>
-          </div>
-          <div class="intro" v-show="!showIntro">
+         
+         
             <p
               class="mainIntro animate__animated animate__fadeInDown animate__delay-0.5s"
+              v-show="!showIntro"
             >
               Aram Balayan
             </p>
             <p
               class="secondaryIntro animate__animated animate__fadeInDown animate__delay-0.5s"
+              v-show="!showIntro"
             >
               Software Engineer
             </p>
-          </div>
+           
+              <p  class="aboutme textwrap" v-show="!showIntro">Im from Los Angeles and enjoy developing software applications from backend to frontend. I am a great addition to your engineering team just let me get my coffee first ☕.</p>
+        
         </v-col>
-        <v-col>
+        <v-col cols="6">
           <div class="contact intro">
-            <p>
-              <a
-                class="contact font"
-                id="myEmail"
-                href="mailto:arambalayan1@gmail.com"
-                value="arambalayan1@gmail.com"
-                >arambalayan1@gmail.com
-              </a>
-              <v-btn
-                @click="copyToClipboard('arambalayan1@gmail.com')"
-                color="black"
-                elevation="2"
-              >
-                <span class="font">Copy to clipboard</span>
-              </v-btn>
-            </p>
-            <p>
-              GitHub:
-              <a class="contact font" href="https://www.github.com/aram392"
-                >aram392</a
-              >
-            </p>
+          
           </div>
         </v-col>
       </v-row>
-      <v-row> </v-row>
+    </v-container>
+    <v-spacer></v-spacer>
+    <v-container> -->
 
-      <v-row>
-        <v-col>
+      
+    <v-container fluid>
+      <v-row class="ma-8 mt-16">
+        <v-col cols="12" md="5">
+            <div
+              class="mainIntro animate__animated animate__fadeInDown animate__delay-0.5s"
+            >
+              Aram Balayan
+            </div>
+            <div
+              class="secondaryIntro animate__animated animate__fadeInDown animate__delay-0.5s mb-4"
+            >
+              Software Engineer
+            </div>
+              <div  class="aboutme" >Im from Los Angeles and enjoy developing software applications from backend to frontend. I am a great addition to your engineering team just let me get my coffee first ☕.</div>
+        </v-col>
+      </v-row>
+    </v-container>
+    
+    <v-container fluid>
+      
+<!-- 
+      <v-row class="mt-6">
+        <v-col cols="12" md="12">
           <div class="intro mainIntro"><p>Projects</p></div>
 
           <div class="project font">
@@ -139,15 +149,114 @@
             </v-card>
           </div>
         </v-col>
-      </v-row>
-      <v-row>
+      </v-row> -->
+
+      <v-row class="mt-16">
         <v-col>
-          <div class="intro mainIntro"><p>Cool Things</p></div>
+          <div class="intro mainIntro"><p>Projects</p></div>
         </v-col>
       </v-row>
-    </div>
-    <div></div>
+
+      <v-row>
+
+      <v-col cols="12" md="6">
+        <v-row justify="center" class="hidden-sm-and-down">
+          <v-col cols="6" md="6">
+              <carousel-3d :autoplay="true" :height="500" :width="250" :autoplayTimeout="4000" :autoplayHoverPause="true" >
+                <slide :index="0">
+                  <v-img src="../assets/meso/iphonex15.png"></v-img>
+                </slide>
+                <slide :index="4">
+                  <v-img src="../assets/meso/iphonex11.png"></v-img>
+                </slide>
+                <slide :index="1">
+                      <v-img src="../assets/meso/iphonex12.png"></v-img>
+
+                </slide>
+                  <slide :index="2">
+                      <v-img src="../assets/meso/iphonex13.png"></v-img>
+
+                </slide>
+                  <slide :index="3">
+                      <v-img src="../assets/meso/iphonex14.png"></v-img>
+
+                </slide>
+              </carousel-3d>
+          </v-col>
+          <v-col cols="6" md="6">
+            This is a
+          </v-col>
+        </v-row>
+
+      <v-row class="hidden-md-and-up">
+        <v-col cols="6" md="6" >
+      <carousel-3d :autoplay="true" :height="175" :width="125" :autoplayTimeout="4000" :autoplayHoverPause="true" >
+        <slide :index="0">
+          <v-img src="../assets/meso/iphonex15.png"></v-img>
+        </slide>
+        <slide :index="4">
+          <v-img src="../assets/meso/iphonex11.png"></v-img>
+        </slide>
+        <slide :index="1">
+              <v-img src="../assets/meso/iphonex12.png"></v-img>
+
+        </slide>
+          <slide :index="2">
+              <v-img src="../assets/meso/iphonex13.png"></v-img>
+
+        </slide>
+          <slide :index="3">
+              <v-img src="../assets/meso/iphonex14.png"></v-img>
+
+        </slide>
+      </carousel-3d>
+      </v-col>
+    <v-col cols="12" md="6">
+      hello
+    </v-col>
+      </v-row>
+
+
+      </v-col>
+      
+
+      
+      <v-col cols="12" md="6">
+        <v-row justify="center" >
+          <v-col cols="8" md="8">
+                  <carousel-3d :autoplay="true" :height="500" :width="250" :autoplayTimeout="5000" :display="1" :inverseScaling="1" :autoplayHoverPause="true"
+ >
+        <slide :index="0">
+          <v-img src="../assets/csun/iphonexcsun1.png"></v-img>
+        </slide>
+        <slide :index="1">
+          <v-img src="../assets/csun/iphonexcsun2.png"></v-img>
+        </slide>
+ 
+      </carousel-3d>
+          </v-col>
+          <v-col cols="12" md="4">
+            This is a
+          </v-col>
+        </v-row>
+      </v-col>
+
+    </v-row>
+
+
+
+
+    </v-container>
+   
+
+    
+     
+
+
+
   </div>
+
+
 </template>
 
 <script>
@@ -240,7 +349,7 @@ export default {
     };
   },
   created() {
-    setTimeout(() => (this.showIntro = false), 6000);
+    setTimeout(() => (this.showIntro = false), 5000);
     setTimeout(() => (this.hoverNotify = true), 6000);
     setTimeout(() => (this.hoverNotify = false), 12000);
   },
@@ -248,9 +357,7 @@ export default {
 </script>
 
 <style scoped>
-.backgroundImage {
-  background-image: url("~@/assets/drawing-1.svg");
-}
+
 .tech-icon {
   max-height: 5rem;
   max-width: 5rem;
@@ -290,9 +397,7 @@ export default {
   font-size: 150%;
 }
 
-.introContainer {
-  height: 16rem;
-}
+
 
 .iconContainer {
   display: flex;
@@ -304,6 +409,9 @@ export default {
 }
 .secondaryIntro {
   font-size: 250%;
+}
+.aboutme{
+  font-size: 110%;
 }
 .hello {
   font-size: 250%;
@@ -324,86 +432,12 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  color: beige;
-  text-shadow: 1px 1px 5px black;
+  color: black;
 }
 
-/* .blobMiniContainer {
-  position: absolute;
-  top: 0px;
+.carousel-3d-slide {
+  background-color: transparent;
+  border-color: transparent;
 }
 
-.blobMini {
-  z-index: 0;
-  height: 13vh;
-
-  animation: floating 300s infinite alternate;
-}
-.blobMini2 {
-  z-index: 0;
-
-  height: 12vh;
-
-  animation: floating2 300s infinite alternate;
-}
-.blobMini3 {
-  z-index: 0;
-
-  height: 10vh;
-
-  animation: floating3 300s infinite alternate;
-}
-.blobMini4 {
-  z-index: 0;
-
-  height: 11vh;
-
-  animation: floating4 300s infinite alternate;
-}
-
-@keyframes floating {
-  0% {
-    transform: translate(90vh, 30vh);
-  }
-  50% {
-    transform: translate(70vh, 45vh);
-  }
-  100% {
-    transform: translate(80vh, 0vh);
-  }
-}
-
-@keyframes floating2 {
-  0% {
-    transform: translate(25vh, 80vh);
-  }
-  50% {
-    transform: translate(30vh, 60vh);
-  }
-  100% {
-    transform: translate(70vh, 90vh);
-  }
-}
-@keyframes floating3 {
-  0% {
-    transform: translate(10vh, 10vh);
-  }
-  50% {
-    transform: translate(30vh, 60vh);
-  }
-  100% {
-    transform: translate(70vh, 90vh);
-  }
-}
-@keyframes floating4 {
-  0% {
-    transform: translate(88vh, 10vh);
-  }
-  50% {
-    transform: translate(10vh, 50vh);
-  }
-  100% {
-    transform: translate(70vh, 90vh);
-  }
-} */
 </style>
