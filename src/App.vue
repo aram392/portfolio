@@ -1,29 +1,49 @@
 <template>
   <v-app>
     <v-main class="apps">
-      <v-app-bar 
-      absolute
-      class="font">Aram Balayan
+      <v-app-bar absolute class="font"
+        >Aram Balayan
         <v-spacer></v-spacer>
-         <a
-                class="contact font"
-                id="myEmail"
-                href="mailto:arambalayan1@gmail.com"
-                value="arambalayan1@gmail.com"
-                >arambalayan1@gmail.com
-              </a>
-              <v-btn class="ma-6">Github</v-btn>
-              <v-btn class="ma-6">LinkedIn</v-btn>
-              <v-btn 
-              class="ml-6"
-                @click="copyToClipboard('arambalayan1@gmail.com')"
-                elevation="2"
-              >
-                <span class="font">Get In Contact</span>
-              </v-btn>
+        <a
+          class="contact font ma-6 hidden-sm-and-down"
+          id="myEmail"
+          href="mailto:arambalayan1@gmail.com"
+          value="arambalayan1@gmail.com"
+          >arambalayan1@gmail.com
+        </a>
+        <v-btn class="ma-6 hidden-sm-and-down">Github</v-btn>
+        <v-btn class="ma-6 hidden-sm-and-down">LinkedIn</v-btn>
+        <v-dialog transition="dialog-bottom-transition" max-width="500">
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn class="ma-6" color="#fff" v-bind="attrs" v-on="on"
+              >Get In Contact</v-btn
+            >
+          </template>
+          <template v-slot:default="dialog">
+            <v-card>
+              <v-card-text>
+                <div class="pa-6">
+                  Email is the best way to contact for me.
+                  <div class="pt-6">
+                    Email:
+                    <a href="mailto:arambalayan1@gmail.com"
+                      >arambalayan1@gmail.com</a
+                    >
+                  </div>
+                  <div class="pt-2">
+                    Phone Number: <a href="tel:+18186675532">818-667-5532</a>
+                  </div>
+                </div>
+              </v-card-text>
+              <v-card-actions class="justify-end">
+                <v-btn text @click="dialog.value = false">Close</v-btn>
+              </v-card-actions>
+            </v-card>
+          </template>
+        </v-dialog>
       </v-app-bar>
       <v-container>
-      <HelloWorld />
+        <HelloWorld />
       </v-container>
     </v-main>
   </v-app>
@@ -37,6 +57,16 @@ export default {
 
   components: {
     HelloWorld,
+  },
+  methods: {
+    copyToClipboard(text) {
+      var dummy = document.createElement("textarea");
+      document.body.appendChild(dummy);
+      dummy.value = text;
+      dummy.select();
+      document.execCommand("copy");
+      document.body.removeChild(dummy);
+    },
   },
 
   data: () => ({

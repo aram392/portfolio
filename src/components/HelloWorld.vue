@@ -1,168 +1,47 @@
 <template>
   <div class="font">
-    <!-- <img class="blob" src="../assets/drawing-2.svg"> -->
-    <!-- <div class="blobMiniContainer">
-      <img class="blobMini" src="../assets/blob3.svg" />
-      <img class="blobMini2" src="../assets/blob1.svg" />
-      <img class="blobMini3" src="../assets/blob2.svg" />
-      <img class="blobMini4" src="../assets/blob5.svg" />
-    </div> -->
-    
-
-    <!-- <v-container fluid>
-      <v-row class="mt-10" justify="space-around">
-        <v-col class="introContainer" cols="4" sm="12">
-              <v-row
-                
-                   class="intro animate__animated animate__fadeOutUp animate__delay-4s"
-            v-show="showIntro"
-            :height="height"
-              >
-                <v-col>
-                  <p class="hello">Hello</p>
-                </v-col>
-                <v-col>
-                  <p
-                    class="emoji animate__animated animate__wobble animate__delay-0.5s"
-                  >
-                    👋
-                  </p>
-                </v-col>
-              </v-row>
-        
-            <p
-              class="mainIntro animate__animated animate__fadeIn animate__delay-0.75s"
-                 v-show="showIntro"
-            :height="height"
-            >
-              My name is Aram
-            </p>
-            <p
-              class="secondaryIntro animate__animated animate__fadeIn animate__delay-2s"
-                 v-show="showIntro"
-            :height="height"
-            >
-              and I like to code.
-            </p>
-         
-         
-            <p
-              class="mainIntro animate__animated animate__fadeInDown animate__delay-0.5s"
-              v-show="!showIntro"
-            >
-              Aram Balayan
-            </p>
-            <p
-              class="secondaryIntro animate__animated animate__fadeInDown animate__delay-0.5s"
-              v-show="!showIntro"
-            >
-              Software Engineer
-            </p>
-           
-              <p  class="aboutme textwrap" v-show="!showIntro">Im from Los Angeles and enjoy developing software applications from backend to frontend. I am a great addition to your engineering team just let me get my coffee first ☕.</p>
-        
-        </v-col>
-        <v-col cols="6">
-          <div class="contact intro">
-          
-          </div>
-        </v-col>
-      </v-row>
-    </v-container>
-    <v-spacer></v-spacer>
-    <v-container> -->
-
-      
     <v-container fluid>
       <v-row class="ma-8 mt-16">
         <v-col cols="12" md="5">
-            <div
-              class="mainIntro animate__animated animate__fadeInDown animate__delay-0.5s"
-            >
-              Aram Balayan
-            </div>
-            <div
-              class="secondaryIntro animate__animated animate__fadeInDown animate__delay-0.5s mb-4"
-            >
-              Software Engineer
-            </div>
-              <div  class="aboutme" >Im from Los Angeles and enjoy developing software applications from backend to frontend. I am a great addition to your engineering team just let me get my coffee first ☕.</div>
+          <div
+            class="mainIntro animate__animated animate__fadeInDown animate__delay-0.5s"
+          >
+            Aram Balayan
+          </div>
+          <div
+            class="secondaryIntro animate__animated animate__fadeInDown animate__delay-0.5s mb-4"
+          >
+            Software Engineer
+          </div>
+          <div class="aboutme">
+            Im from Los Angeles and enjoy developing software applications from
+            backend to frontend. I am a great addition to your engineering team
+            just let me get my coffee first ☕.
+          </div>
         </v-col>
       </v-row>
     </v-container>
-    
+
     <v-container fluid>
-      
-<!-- 
-      <v-row class="mt-6">
-        <v-col cols="12" md="12">
-          <div class="intro mainIntro"><p>Projects</p></div>
-
-          <div class="project font">
-            <v-card outlined color="#3949ab" shaped>
-              <v-row class="font">
-                <v-col>
-                  <p class="projectDescription" v-show="!hoverNotify">
-                    Technologies used
-                  </p>
-                  <p
-                    class="projectDescription animate__animated animate__shakeY animate__slower"
-                    v-show="hoverNotify"
-                  >
-                    👇 Hover Over Me 👇
-                  </p>
-                  <ul class="iconContainer">
-                    <il v-for="icon in project1" :key="icon">
-                      <v-tooltip
-                        bottom
-                        color="pink"
-                        offset-overflow="true"
-                        max-width="400px"
-                        size="50px"
-                        nudge-bottom="30"
-                      >
-                        <template v-slot:activator="{ on, attrs }">
-                          <span class="hvr-pulse" v-bind="attrs" v-on="on">
-                            <img
-                              class="tech-icon"
-                              v-bind:src="
-                                require('@/assets/project1/' + icon.filename)
-                              "
-                          /></span>
-                        </template>
-                        <span>{{ icon.label }}</span>
-                      </v-tooltip>
-                    </il>
-                  </ul>
-                </v-col>
-                <v-col>
-                  <p class="projectDescription">PlaceHolder Title</p>
-                  <p>Project description here</p>
-                  <p>blah blah blah</p>
-                </v-col>
-                <v-col>
-                  <p class="projectDescription">Showcase</p>
-                  <p>Project description here</p>
-                  <p>blah blah blah</p></v-col
-                >
-              </v-row>
-            </v-card>
-          </div>
-        </v-col>
-      </v-row> -->
-
       <v-row class="mt-16">
         <v-col>
           <div class="intro mainIntro"><p>Projects</p></div>
         </v-col>
       </v-row>
 
-      <v-row>
-
-      <v-col cols="12" md="6">
-        <v-row justify="center" class="hidden-sm-and-down">
-          <v-col cols="6" md="6">
-              <carousel-3d :autoplay="true" :height="500" :width="250" :autoplayTimeout="4000" :autoplayHoverPause="true" >
+      <v-row class="">
+        <v-col cols="12" md="6" class="">
+          <v-row class="hidden-sm-and-down projectBackground" justify="center">
+            <v-col cols="8" md="8">
+              <carousel-3d
+                :autoplay="true"
+                :height="500"
+                :width="250"
+                :autoplayTimeout="4000"
+                :autoplayHoverPause="true"
+                :perspective="30"
+                :inverseScaling="400"
+              >
                 <slide :index="0">
                   <v-img src="../assets/meso/iphonex15.png"></v-img>
                 </slide>
@@ -170,93 +49,505 @@
                   <v-img src="../assets/meso/iphonex11.png"></v-img>
                 </slide>
                 <slide :index="1">
-                      <v-img src="../assets/meso/iphonex12.png"></v-img>
-
+                  <v-img src="../assets/meso/iphonex12.png"></v-img>
                 </slide>
-                  <slide :index="2">
-                      <v-img src="../assets/meso/iphonex13.png"></v-img>
-
+                <slide :index="2">
+                  <v-img src="../assets/meso/iphonex13.png"></v-img>
                 </slide>
-                  <slide :index="3">
-                      <v-img src="../assets/meso/iphonex14.png"></v-img>
-
+                <slide :index="3">
+                  <v-img src="../assets/meso/iphonex14.png"></v-img>
                 </slide>
               </carousel-3d>
-          </v-col>
-          <v-col cols="6" md="6">
-            This is a
-          </v-col>
-        </v-row>
+            </v-col>
+            <v-col cols="4" md="4">
+              <div class="projectTitle">MesoHealth</div>
+              <div class="projectSubTitle mb-16">
+                MesoHealth is a hiring/booking web service for nurses and clinic
+                administrators.
+              </div>
+              <div justify-center>
+                <v-dialog transition="dialog-bottom-transition" max-width="750">
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn color="#fff" v-bind="attrs" v-on="on"
+                      >More Info</v-btn
+                    >
+                  </template>
+                  <template v-slot:default="dialog">
+                    <v-card>
+                      <v-toolbar color="#fff" class="font"
+                        >MesoHealth</v-toolbar
+                      >
+                      <v-card-text class="font">
+                        <div class="pa-6 font">
+                          Decoupled services with Docker using domain driven
+                          design. This allows minimal restructuring for new
+                          features. Developed Golang backend for nurse
+                          credential verification. Consumes requests and
+                          retrieves data fromgovernment agency to parse data
+                          into Database models.
+                        </div>
+                        <div class="pa-6 font">Technologies used</div>
+                        <div>
+                          <ul class="iconContainer font">
+                            <il v-for="icon in project1" :key="icon">
+                              <v-tooltip
+                                bottom
+                                color="#fff"
+                                offset-overflow="true"
+                                max-width="400px"
+                                size="50px"
+                                nudge-bottom="30"
+                              >
+                                <template v-slot:activator="{ on, attrs }">
+                                  <span
+                                    class="hvr-pulse"
+                                    v-bind="attrs"
+                                    v-on="on"
+                                  >
+                                    <img
+                                      class="tech-icon"
+                                      v-bind:src="
+                                        require('@/assets/project1/' +
+                                          icon.filename)
+                                      "
+                                  /></span>
+                                </template>
+                                <span>{{ icon.label }}</span>
+                              </v-tooltip>
+                            </il>
+                          </ul>
+                        </div>
+                      </v-card-text>
+                      <v-card-actions class="justify-end">
+                        <v-btn text @click="dialog.value = false">Close</v-btn>
+                      </v-card-actions>
+                    </v-card>
+                  </template>
+                </v-dialog>
+              </div>
+            </v-col>
+          </v-row>
+          <v-row class="hidden-md-and-up projectBackground">
+            <v-col cols="6" md="6">
+              <carousel-3d
+                :autoplay="true"
+                :height="250"
+                :width="110"
+                :autoplayTimeout="4000"
+                :autoplayHoverPause="true"
+              >
+                <slide :index="0">
+                  <v-img src="../assets/meso/iphonex15.png"></v-img>
+                </slide>
+                <slide :index="4">
+                  <v-img src="../assets/meso/iphonex11.png"></v-img>
+                </slide>
+                <slide :index="1">
+                  <v-img src="../assets/meso/iphonex12.png"></v-img>
+                </slide>
+                <slide :index="2">
+                  <v-img src="../assets/meso/iphonex13.png"></v-img>
+                </slide>
+                <slide :index="3">
+                  <v-img src="../assets/meso/iphonex14.png"></v-img>
+                </slide>
+              </carousel-3d>
+            </v-col>
+            <v-col cols="6" md="6">
+              <div class="projectSubTitle">MesoHealth</div>
+              <div class="projectSubTitleMobile mb-16">MesoHealth is a</div>
+              <div justify-center>
+                <v-dialog
+                  transition="dialog-bottom-transition"
+                  max-width="1500"
+                >
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn color="#fff" v-bind="attrs" v-on="on"
+                      >More Info</v-btn
+                    >
+                  </template>
+                  <template v-slot:default="dialog">
+                    <v-card>
+                      <v-toolbar color="#fff">MesoHealth</v-toolbar>
+                      <v-card-text>
+                        <div class="pa-6">Hello world!</div>
+                        <div class="pa-6">Technologies used</div>
+                        <div>
+                          <ul class="iconContainer font">
+                            <il v-for="icon in project1" :key="icon">
+                              <v-tooltip
+                                bottom
+                                color="#fff"
+                                offset-overflow="true"
+                                max-width="400px"
+                                size="50px"
+                                nudge-bottom="30"
+                              >
+                                <template v-slot:activator="{ on, attrs }">
+                                  <span
+                                    class="hvr-pulse"
+                                    v-bind="attrs"
+                                    v-on="on"
+                                  >
+                                    <img
+                                      class="tech-icon"
+                                      v-bind:src="
+                                        require('@/assets/project1/' +
+                                          icon.filename)
+                                      "
+                                  /></span>
+                                </template>
+                                <span>{{ icon.label }}</span>
+                              </v-tooltip>
+                            </il>
+                          </ul>
+                        </div>
+                      </v-card-text>
+                      <v-card-actions class="justify-end">
+                        <v-btn text @click="dialog.value = false">Close</v-btn>
+                      </v-card-actions>
+                    </v-card>
+                  </template>
+                </v-dialog>
+              </div>
+            </v-col>
+          </v-row>
+        </v-col>
 
-      <v-row class="hidden-md-and-up">
-        <v-col cols="6" md="6" >
-      <carousel-3d :autoplay="true" :height="175" :width="125" :autoplayTimeout="4000" :autoplayHoverPause="true" >
-        <slide :index="0">
-          <v-img src="../assets/meso/iphonex15.png"></v-img>
-        </slide>
-        <slide :index="4">
-          <v-img src="../assets/meso/iphonex11.png"></v-img>
-        </slide>
-        <slide :index="1">
-              <v-img src="../assets/meso/iphonex12.png"></v-img>
-
-        </slide>
-          <slide :index="2">
-              <v-img src="../assets/meso/iphonex13.png"></v-img>
-
-        </slide>
-          <slide :index="3">
-              <v-img src="../assets/meso/iphonex14.png"></v-img>
-
-        </slide>
-      </carousel-3d>
-      </v-col>
-    <v-col cols="12" md="6">
-      hello
-    </v-col>
+        <v-col cols="12" md="6" class="projectBackground">
+          <v-row class="hidden-sm-and-down" justify="center">
+            <v-col cols="5" md="5">
+              <carousel-3d
+                :autoplay="true"
+                :height="500"
+                :width="250"
+                :autoplayTimeout="5000"
+                :display="1"
+                :inverseScaling="1"
+                :autoplayHoverPause="true"
+              >
+                <slide :index="0">
+                  <v-img src="../assets/csun/iphonexcsun1.png"></v-img>
+                </slide>
+                <slide :index="1">
+                  <v-img src="../assets/csun/iphonexcsun2.png"></v-img>
+                </slide>
+              </carousel-3d>
+            </v-col>
+            <v-col cols="7" md="7">
+              <div class="projectTitle">CSUN Class Search</div>
+              <div class="projectSubTitle mb-16">
+                Using new technologies to redesign search by making it more
+                simple.
+              </div>
+              <div justify-center>
+                <v-dialog
+                  transition="dialog-bottom-transition"
+                  max-width="1500"
+                >
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn color="#fff" v-bind="attrs" v-on="on"
+                      >More Info</v-btn
+                    >
+                  </template>
+                  <template v-slot:default="dialog">
+                    <v-card>
+                      <v-toolbar color="#fff">MesoHealth</v-toolbar>
+                      <v-card-text>
+                        <div class="pa-6"></div>
+                        <div class="pa-6">Technologies used</div>
+                        <div>
+                          <ul class="iconContainer font">
+                            <il v-for="icon in project3" :key="icon">
+                              <v-tooltip
+                                bottom
+                                color="#fff"
+                                offset-overflow="true"
+                                max-width="400px"
+                                size="50px"
+                                nudge-bottom="30"
+                              >
+                                <template v-slot:activator="{ on, attrs }">
+                                  <span
+                                    class="hvr-pulse"
+                                    v-bind="attrs"
+                                    v-on="on"
+                                  >
+                                    <img
+                                      class="tech-icon"
+                                      v-bind:src="
+                                        require('@/assets/project1/' +
+                                          icon.filename)
+                                      "
+                                  /></span>
+                                </template>
+                                <span>{{ icon.label }}</span>
+                              </v-tooltip>
+                            </il>
+                          </ul>
+                        </div>
+                      </v-card-text>
+                      <v-card-actions class="justify-end">
+                        <v-btn text @click="dialog.value = false">Close</v-btn>
+                      </v-card-actions>
+                    </v-card>
+                  </template>
+                </v-dialog>
+              </div>
+            </v-col>
+          </v-row>
+          <v-row class="hidden-md-and-up" justify="center">
+            <v-col cols="5" md="5">
+              <carousel-3d
+                :autoplay="true"
+                :height="500"
+                :width="250"
+                :autoplayTimeout="5000"
+                :display="1"
+                :inverseScaling="1"
+                :autoplayHoverPause="true"
+              >
+                <slide :index="0">
+                  <v-img src="../assets/csun/iphonexcsun1.png"></v-img>
+                </slide>
+                <slide :index="1">
+                  <v-img src="../assets/csun/iphonexcsun2.png"></v-img>
+                </slide>
+              </carousel-3d>
+            </v-col>
+            <v-col cols="7" md="7">
+              <div class="projectSubTitle">CSUN Class Search</div>
+              <div class="projectSubTitleMobile mb-16">MesoHealth is a</div>
+              <div justify-center>
+                <v-dialog
+                  transition="dialog-bottom-transition"
+                  max-width="1500"
+                >
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn color="#fff" v-bind="attrs" v-on="on"
+                      >More Info</v-btn
+                    >
+                  </template>
+                  <template v-slot:default="dialog">
+                    <v-card>
+                      <v-toolbar color="#fff">MesoHealth</v-toolbar>
+                      <v-card-text>
+                        <div class="pa-6">Hello world!</div>
+                        <div class="pa-6">Technologies used</div>
+                        <div>
+                          <ul class="iconContainer font">
+                            <il v-for="icon in project1" :key="icon">
+                              <v-tooltip
+                                bottom
+                                color="#fff"
+                                offset-overflow="true"
+                                max-width="400px"
+                                size="50px"
+                                nudge-bottom="30"
+                              >
+                                <template v-slot:activator="{ on, attrs }">
+                                  <span
+                                    class="hvr-pulse"
+                                    v-bind="attrs"
+                                    v-on="on"
+                                  >
+                                    <img
+                                      class="tech-icon"
+                                      v-bind:src="
+                                        require('@/assets/project1/' +
+                                          icon.filename)
+                                      "
+                                  /></span>
+                                </template>
+                                <span>{{ icon.label }}</span>
+                              </v-tooltip>
+                            </il>
+                          </ul>
+                        </div>
+                      </v-card-text>
+                      <v-card-actions class="justify-end">
+                        <v-btn text @click="dialog.value = false">Close</v-btn>
+                      </v-card-actions>
+                    </v-card>
+                  </template>
+                </v-dialog>
+              </div>
+            </v-col>
+          </v-row>
+        </v-col>
       </v-row>
 
-
-      </v-col>
-      
-
-      
-      <v-col cols="12" md="6">
-        <v-row justify="center" >
-          <v-col cols="8" md="8">
-                  <carousel-3d :autoplay="true" :height="500" :width="250" :autoplayTimeout="5000" :display="1" :inverseScaling="1" :autoplayHoverPause="true"
- >
-        <slide :index="0">
-          <v-img src="../assets/csun/iphonexcsun1.png"></v-img>
-        </slide>
-        <slide :index="1">
-          <v-img src="../assets/csun/iphonexcsun2.png"></v-img>
-        </slide>
- 
-      </carousel-3d>
-          </v-col>
-          <v-col cols="12" md="4">
-            This is a
-          </v-col>
-        </v-row>
-      </v-col>
-
-    </v-row>
-
-
-
-
+      <v-row class="" justify="center">
+        <v-col cols="12" md="6" class="">
+          <v-row
+            justify="center"
+            class="hidden-sm-and-down projectBackground mt-10"
+          >
+            <v-col cols="8" md="12">
+              <carousel-3d
+                :autoplay="true"
+                :height="500"
+                :width="250"
+                :autoplayTimeout="4000"
+                :autoplayHoverPause="true"
+                :perspective="30"
+                :inverseScaling="400"
+              >
+                <slide :index="0">
+                  <v-img src="../assets/meso/iphonex15.png"></v-img>
+                </slide>
+                <slide :index="4">
+                  <v-img src="../assets/meso/iphonex11.png"></v-img>
+                </slide>
+                <slide :index="1">
+                  <v-img src="../assets/meso/iphonex12.png"></v-img>
+                </slide>
+                <slide :index="2">
+                  <v-img src="../assets/meso/iphonex13.png"></v-img>
+                </slide>
+                <slide :index="3">
+                  <v-img src="../assets/meso/iphonex14.png"></v-img>
+                </slide>
+              </carousel-3d>
+            </v-col>
+            <v-col cols="4" md="4">
+              <div class="projectTitle">LeaseMyRide</div>
+              <div class="projectSubTitle mb-16">LeaseMyRide is a</div>
+              <div justify-center>
+                <v-dialog
+                  transition="dialog-bottom-transition"
+                  max-width="1500"
+                >
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn color="#fff" v-bind="attrs" v-on="on"
+                      >More Info</v-btn
+                    >
+                  </template>
+                  <template v-slot:default="dialog">
+                    <v-card>
+                      <v-toolbar color="#fff">LeaseMyRide</v-toolbar>
+                      <v-card-text>
+                        <div class="pa-6">LeaseMyRide is a</div>
+                        <div class="pa-6">Technologies used</div>
+                        <div>
+                          <ul class="iconContainer font">
+                            <il v-for="icon in project1" :key="icon">
+                              <v-tooltip
+                                bottom
+                                color="#fff"
+                                offset-overflow="true"
+                                max-width="400px"
+                                size="50px"
+                                nudge-bottom="30"
+                              >
+                                <template v-slot:activator="{ on, attrs }">
+                                  <span
+                                    class="hvr-pulse"
+                                    v-bind="attrs"
+                                    v-on="on"
+                                  >
+                                    <img
+                                      class="tech-icon"
+                                      v-bind:src="
+                                        require('@/assets/project1/' +
+                                          icon.filename)
+                                      "
+                                  /></span>
+                                </template>
+                                <span>{{ icon.label }}</span>
+                              </v-tooltip>
+                            </il>
+                          </ul>
+                        </div>
+                      </v-card-text>
+                      <v-card-actions class="justify-end">
+                        <v-btn text @click="dialog.value = false">Close</v-btn>
+                      </v-card-actions>
+                    </v-card>
+                  </template>
+                </v-dialog>
+              </div>
+            </v-col>
+          </v-row>
+          <v-row justify="center" class="hidden-md-and-up projectBackground">
+            <v-col cols="6" md="6"> </v-col>
+            <v-col cols="4" md="4">
+              <div class="projectSubTitle">LeaseMyRide</div>
+              <div class="mb-16" style="font-size: .75rem;">
+                LeaseMyRide is a test
+              </div>
+              <div justify-center>
+                <v-dialog
+                  transition="dialog-bottom-transition"
+                  max-width="1500"
+                >
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn color="#fff" v-bind="attrs" v-on="on"
+                      >More Info</v-btn
+                    >
+                  </template>
+                  <template v-slot:default="dialog">
+                    <v-card>
+                      <v-toolbar color="#fff">LeaseMyRide</v-toolbar>
+                      <v-card-text>
+                        <div class="pa-6">LeaseMyRide is a</div>
+                        <div class="pa-6">Technologies used</div>
+                        <div>
+                          <ul class="iconContainer font">
+                            <il v-for="icon in project1" :key="icon">
+                              <v-tooltip
+                                bottom
+                                color="#fff"
+                                offset-overflow="true"
+                                max-width="400px"
+                                size="50px"
+                                nudge-bottom="30"
+                              >
+                                <template v-slot:activator="{ on, attrs }">
+                                  <span
+                                    class="hvr-pulse"
+                                    v-bind="attrs"
+                                    v-on="on"
+                                  >
+                                    <img
+                                      class="tech-icon"
+                                      v-bind:src="
+                                        require('@/assets/project1/' +
+                                          icon.filename)
+                                      "
+                                  /></span>
+                                </template>
+                                <span>{{ icon.label }}</span>
+                              </v-tooltip>
+                            </il>
+                          </ul>
+                        </div>
+                      </v-card-text>
+                      <v-card-actions class="justify-end">
+                        <v-btn text @click="dialog.value = false">Close</v-btn>
+                      </v-card-actions>
+                    </v-card>
+                  </template>
+                </v-dialog>
+              </div>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
     </v-container>
-   
-
-    
-     
-
-
-
+    <v-container>
+      <v-row class="mt-16">
+        <v-col>
+          <div class="intro mainIntro"><p>About Me</p></div>
+        </v-col>
+      </v-row>
+      <v-row class="mt-16">
+        <v-col>
+          <div class="intro mainIntro"><p>Download my resume</p></div>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
-
-
 </template>
 
 <script>
@@ -346,6 +637,13 @@ export default {
             "Nuclino was used to organize features of services and provide documentation for endpoints.",
         },
       ],
+      project3: [
+        { filename: "vue.png", label: "test" },
+        {
+          filename: "python.svg",
+          label: "Used to gather class names from API and convert to JSON.",
+        },
+      ],
     };
   },
   created() {
@@ -357,7 +655,6 @@ export default {
 </script>
 
 <style scoped>
-
 .tech-icon {
   max-height: 5rem;
   max-width: 5rem;
@@ -387,8 +684,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  color: beige;
-  text-shadow: 1px 1px 5px black;
+  color: black;
 }
 
 .contact {
@@ -396,8 +692,6 @@ export default {
   text-decoration: none;
   font-size: 150%;
 }
-
-
 
 .iconContainer {
   display: flex;
@@ -410,7 +704,7 @@ export default {
 .secondaryIntro {
   font-size: 250%;
 }
-.aboutme{
+.aboutme {
   font-size: 110%;
 }
 .hello {
@@ -424,6 +718,18 @@ export default {
 
 .project {
   height: 20rem;
+}
+.projectTitle {
+  font-size: 3rem;
+}
+.projectSubTitleMobile {
+  font-size: 0.75rem;
+}
+.projectSubTitle {
+  font-size: 1rem;
+}
+.projectBackground {
+  background-color: lightgray;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
@@ -439,5 +745,4 @@ export default {
   background-color: transparent;
   border-color: transparent;
 }
-
 </style>
