@@ -79,17 +79,22 @@
                       >
                       <v-card-text class="font">
                         <div class="pa-6 font">
-                          Decoupled services with Docker using domain driven
-                          design. This allows minimal restructuring for new
-                          features. Developed Golang backend for nurse
-                          credential verification. Consumes requests and
-                          retrieves data fromgovernment agency to parse data
-                          into Database models.
+                          <ul>
+                            MesoHealth seeks to improve the current way the
+                            health industry handles per diem workers.
+                          </ul>
+                          Our software allows a more streamlined way of
+                          sceduling on call workers. It can also be a tool used
+                          to find jobs in the health industry. The design of the
+                          system was made using domain driven design. This
+                          allows minimal restructuring for new features.
                         </div>
-                        <div class="pa-6 font">Technologies used</div>
+                        <div class="pa-6 font">
+                          Technologies used (Hover over icons)
+                        </div>
                         <div>
                           <ul class="iconContainer font">
-                            <il v-for="icon in project1" :key="icon">
+                            <il v-for="icon in project2" :key="icon">
                               <v-tooltip
                                 bottom
                                 color="#fff"
@@ -155,7 +160,10 @@
             </v-col>
             <v-col cols="6" md="6">
               <div class="projectSubTitle">MesoHealth</div>
-              <div class="projectSubTitleMobile mb-16">MesoHealth is a</div>
+              <div class="projectSubTitleMobile mb-8">
+                MesoHealth is a hiring/booking web service for nurses and clinic
+                administrators.
+              </div>
               <div justify-center>
                 <v-dialog
                   transition="dialog-bottom-transition"
@@ -170,11 +178,22 @@
                     <v-card>
                       <v-toolbar color="#fff">MesoHealth</v-toolbar>
                       <v-card-text>
-                        <div class="pa-6">Hello world!</div>
-                        <div class="pa-6">Technologies used</div>
+                        <div class="pa-6 font">
+                          MesoHealth seeks to improve the current way the health
+                          industry handles per diem workers. Our software allows
+                          a more streamlined way of sceduling on call workers.
+                          It can also be a tool used to find jobs in the health
+                          industry. The design of the system was made using
+                          domain driven design. This allows minimal
+                          restructuring for new features.
+                        </div>
+                        <div class="pa-6">Technologies used (Click icons)</div>
                         <div>
-                          <ul class="iconContainer font">
-                            <il v-for="icon in project1" :key="icon">
+                          <ul
+                            class="iconContainer font"
+                            style="display: grid;grid-template-columns:repeat(3,1fr);"
+                          >
+                            <il v-for="icon in project2" :key="icon">
                               <v-tooltip
                                 bottom
                                 color="#fff"
@@ -238,13 +257,10 @@
               <div class="projectTitle">CSUN Class Search</div>
               <div class="projectSubTitle mb-16">
                 Using new technologies to redesign search by making it more
-                simple.
+                simple and mobile friendly.
               </div>
               <div justify-center>
-                <v-dialog
-                  transition="dialog-bottom-transition"
-                  max-width="1500"
-                >
+                <v-dialog transition="dialog-bottom-transition" max-width="750">
                   <template v-slot:activator="{ on, attrs }">
                     <v-btn color="#fff" v-bind="attrs" v-on="on"
                       >More Info</v-btn
@@ -252,10 +268,17 @@
                   </template>
                   <template v-slot:default="dialog">
                     <v-card>
-                      <v-toolbar color="#fff">MesoHealth</v-toolbar>
+                      <v-toolbar color="#fff">CSUN Class Search</v-toolbar>
                       <v-card-text>
-                        <div class="pa-6"></div>
-                        <div class="pa-6">Technologies used</div>
+                        <div class="pa-6">
+                          This project was inspired by the complaints of the
+                          current user interface of the class search. Learning
+                          about Javascript and Vue helped change an already
+                          existing system to a proof of concept.
+                        </div>
+                        <div class="pa-6">
+                          Technologies used (Hover over icons)
+                        </div>
                         <div>
                           <ul class="iconContainer font">
                             <il v-for="icon in project3" :key="icon">
@@ -297,7 +320,7 @@
             </v-col>
           </v-row>
           <v-row class="hidden-md-and-up" justify="center">
-            <v-col cols="5" md="5">
+            <v-col cols="6" md="6">
               <carousel-3d
                 :autoplay="true"
                 :height="500"
@@ -315,9 +338,12 @@
                 </slide>
               </carousel-3d>
             </v-col>
-            <v-col cols="7" md="7">
+            <v-col cols="6" md="6">
               <div class="projectSubTitle">CSUN Class Search</div>
-              <div class="projectSubTitleMobile mb-16">MesoHealth is a</div>
+              <div class="projectSubTitleMobile mb-8">
+                Using new technologies to redesign search by making it more
+                simple and mobile friendly.
+              </div>
               <div justify-center>
                 <v-dialog
                   transition="dialog-bottom-transition"
@@ -330,12 +356,22 @@
                   </template>
                   <template v-slot:default="dialog">
                     <v-card>
-                      <v-toolbar color="#fff">MesoHealth</v-toolbar>
+                      <v-toolbar color="#fff">CSUN Class Search</v-toolbar>
                       <v-card-text>
-                        <div class="pa-6">Hello world!</div>
-                        <div class="pa-6">Technologies used</div>
+                        <div class="pa-6">
+                          This project was inspired by the complaints of the
+                          current user interface of the class search. Learning
+                          about Javascript and Vue helped change an already
+                          existing system to a proof of concept.
+                        </div>
+                        <div class="pa-6">
+                          Technologies used (Click icons)
+                        </div>
                         <div>
-                          <ul class="iconContainer font">
+                          <ul
+                            class="iconContainer font"
+                            style="display: grid;grid-template-columns:repeat(3,1fr);"
+                          >
                             <il v-for="icon in project1" :key="icon">
                               <v-tooltip
                                 bottom
@@ -384,40 +420,16 @@
             class="hidden-sm-and-down projectBackground mt-10"
           >
             <v-col cols="8" md="12">
-              <carousel-3d
-                :autoplay="true"
-                :height="500"
-                :width="250"
-                :autoplayTimeout="4000"
-                :autoplayHoverPause="true"
-                :perspective="30"
-                :inverseScaling="400"
-              >
-                <slide :index="0">
-                  <v-img src="../assets/meso/iphonex15.png"></v-img>
-                </slide>
-                <slide :index="4">
-                  <v-img src="../assets/meso/iphonex11.png"></v-img>
-                </slide>
-                <slide :index="1">
-                  <v-img src="../assets/meso/iphonex12.png"></v-img>
-                </slide>
-                <slide :index="2">
-                  <v-img src="../assets/meso/iphonex13.png"></v-img>
-                </slide>
-                <slide :index="3">
-                  <v-img src="../assets/meso/iphonex14.png"></v-img>
-                </slide>
-              </carousel-3d>
+              <v-img src="../assets/leasemyride/leasemyride11.png"></v-img>
             </v-col>
             <v-col cols="4" md="4">
               <div class="projectTitle">LeaseMyRide</div>
-              <div class="projectSubTitle mb-16">LeaseMyRide is a</div>
+              <div class="projectSubTitle mb-16">
+                LeaseMyRide is a lease broker and lead aggregator. (Work In
+                Progress)
+              </div>
               <div justify-center>
-                <v-dialog
-                  transition="dialog-bottom-transition"
-                  max-width="1500"
-                >
+                <v-dialog transition="dialog-bottom-transition" max-width="750">
                   <template v-slot:activator="{ on, attrs }">
                     <v-btn color="#fff" v-bind="attrs" v-on="on"
                       >More Info</v-btn
@@ -425,10 +437,20 @@
                   </template>
                   <template v-slot:default="dialog">
                     <v-card>
-                      <v-toolbar color="#fff">LeaseMyRide</v-toolbar>
+                      <v-toolbar color="#fff"
+                        >LeaseMyRide (Work In Progress)</v-toolbar
+                      >
                       <v-card-text>
-                        <div class="pa-6">LeaseMyRide is a</div>
-                        <div class="pa-6">Technologies used</div>
+                        <div class="pa-6">
+                          LeaseMyRide is a lease broker and lead aggregator. The
+                          service provides clients easy access to brokers while
+                          increasing leads for brokers. The business model is
+                          planned to have a subcription service for brokers to
+                          allow for lead generation.
+                        </div>
+                        <div class="pa-6">
+                          Technologies used (Hover over icons)
+                        </div>
                         <div>
                           <ul class="iconContainer font">
                             <il v-for="icon in project1" :key="icon">
@@ -470,11 +492,14 @@
             </v-col>
           </v-row>
           <v-row justify="center" class="hidden-md-and-up projectBackground">
-            <v-col cols="6" md="6"> </v-col>
-            <v-col cols="4" md="4">
+            <v-col cols="6" md="6">
+              <v-img src="../assets/leasemyride/leasemyride11.png"></v-img>
+            </v-col>
+            <v-col cols="6" md="6">
               <div class="projectSubTitle">LeaseMyRide</div>
-              <div class="mb-16" style="font-size: .75rem;">
-                LeaseMyRide is a test
+              <div class="mb-8" style="font-size: .75rem;">
+                LeaseMyRide is a lease broker and lead aggregator. (Work In
+                Progress)
               </div>
               <div justify-center>
                 <v-dialog
@@ -490,10 +515,19 @@
                     <v-card>
                       <v-toolbar color="#fff">LeaseMyRide</v-toolbar>
                       <v-card-text>
-                        <div class="pa-6">LeaseMyRide is a</div>
-                        <div class="pa-6">Technologies used</div>
+                        <div class="pa-6">
+                          LeaseMyRide is a lease broker and lead aggregator. The
+                          service provides clients easy access to brokers while
+                          increasing leads for brokers. The business model is
+                          planned to have a subcription service for brokers to
+                          allow for lead generation.
+                        </div>
+                        <div class="pa-6">Technologies used (Click icons)</div>
                         <div>
-                          <ul class="iconContainer font">
+                          <ul
+                            class="iconContainer font"
+                            style="display: grid;grid-template-columns:repeat(3,1fr);"
+                          >
                             <il v-for="icon in project1" :key="icon">
                               <v-tooltip
                                 bottom
@@ -538,12 +572,12 @@
     <v-container>
       <v-row class="mt-16">
         <v-col>
-          <div class="intro mainIntro"><p>About Me</p></div>
+          <!-- <div class="intro mainIntro"><p>About Me</p></div> -->
         </v-col>
       </v-row>
       <v-row class="mt-16">
         <v-col>
-          <div class="intro mainIntro"><p>Download my resume</p></div>
+          <!-- <div class="intro mainIntro"><p>Download my resume</p></div> -->
         </v-col>
       </v-row>
     </v-container>
@@ -597,21 +631,17 @@ export default {
         {
           filename: "vue.png",
           label:
-            "Vue.js was chosen since I am firmiliar with this framework. It allowed me to spend more time building backend services.",
+            "Vue.js was chosen since I am familiar with this framework. It allowed me to spend more time building backend services.",
         },
         {
           filename: "docker.png",
           label:
-            "Docker was used for containerization of microservices. It allows services to run decoupled and services can be created independently.",
+            "Docker was used for containerization of microservices. For example the backend can be spun up with once docker command and it makes it easy to test on the fly.",
         },
         {
           filename: "postgres.png",
           label:
             "Postgres was used since it is a great open source database management tool.",
-        },
-        {
-          filename: "python.svg",
-          label: "Python",
         },
       ],
       project2: [
@@ -620,7 +650,11 @@ export default {
           label:
             "Golang was used for backend services as it has a robust support for creating RESTful services and building out large applications with ease.",
         },
-        { filename: "vue.png", label: "Vue.js" },
+        {
+          filename: "vue.png",
+          label:
+            "Vue.js is a great framework to build out large pages with multiple components. It allowed our team to take our Figma prototypes and create exact copy components.",
+        },
         {
           filename: "docker.png",
           label:
@@ -638,7 +672,11 @@ export default {
         },
       ],
       project3: [
-        { filename: "vue.png", label: "test" },
+        {
+          filename: "vue.png",
+          label:
+            "Used to give a responsive update. The issue of pages being reloaded after each click is now fixed with Vue.",
+        },
         {
           filename: "python.svg",
           label: "Used to gather class names from API and convert to JSON.",
