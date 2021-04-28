@@ -29,8 +29,8 @@
         </v-col>
       </v-row>
 
-      <v-row class="">
-        <v-col cols="12" md="6" class="">
+      <v-row class="" justify="center">
+        <v-col cols="12" md="8" class="">
           <v-row class="hidden-sm-and-down projectBackground" justify="center">
             <v-col cols="8" md="8">
               <carousel-3d
@@ -74,7 +74,7 @@
                   </template>
                   <template v-slot:default="dialog">
                     <v-card>
-                      <v-toolbar color="#fff" class="font"
+                      <v-toolbar color="grey" class="font"
                         >MesoHealth</v-toolbar
                       >
                       <v-card-text class="font">
@@ -176,7 +176,7 @@
                   </template>
                   <template v-slot:default="dialog">
                     <v-card>
-                      <v-toolbar color="#fff">MesoHealth</v-toolbar>
+                      <v-toolbar color="grey">MesoHealth</v-toolbar>
                       <v-card-text>
                         <div class="pa-6 font">
                           MesoHealth seeks to improve the current way the health
@@ -232,9 +232,170 @@
             </v-col>
           </v-row>
         </v-col>
+      </v-row>
 
-        <v-col cols="12" md="6" class="projectBackground">
-          <v-row class="hidden-sm-and-down" justify="center">
+      <v-row class="" justify="center">
+        <v-col cols="12" md="7" class="">
+          <v-row
+            justify="center"
+            class="hidden-sm-and-down projectBackground2 mt-10 mb-10"
+          >
+            <v-col cols="8" md="12">
+              <v-img src="../assets/leasemyride/leasemyride11.png"></v-img>
+            </v-col>
+            <v-col cols="4" md="4">
+              <div class="projectTitle">LeaseMyRide</div>
+              <div class="projectSubTitle mb-16">
+                LeaseMyRide is a lease broker and lead aggregator. (Work In
+                Progress)
+              </div>
+              <div justify-center>
+                <v-dialog transition="dialog-bottom-transition" max-width="750">
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn color="#fff" v-bind="attrs" v-on="on"
+                      >More Info</v-btn
+                    >
+                  </template>
+                  <template v-slot:default="dialog">
+                    <v-card>
+                      <v-toolbar color="blue lighten-3"
+                        >LeaseMyRide (Work In Progress)</v-toolbar
+                      >
+                      <v-card-text>
+                        <div class="pa-6">
+                          LeaseMyRide is a lease broker and lead aggregator. The
+                          service provides clients easy access to brokers while
+                          increasing leads for brokers. The business model is
+                          planned to have a subcription service for brokers to
+                          allow for lead generation.
+                        </div>
+                        <div class="pa-6">
+                          Technologies used (Hover over icons)
+                        </div>
+                        <div>
+                          <ul class="iconContainer font">
+                            <il v-for="icon in project1" :key="icon">
+                              <v-tooltip
+                                bottom
+                                color="#fff"
+                                offset-overflow="true"
+                                max-width="400px"
+                                size="50px"
+                                nudge-bottom="30"
+                              >
+                                <template v-slot:activator="{ on, attrs }">
+                                  <span
+                                    class="hvr-pulse"
+                                    v-bind="attrs"
+                                    v-on="on"
+                                  >
+                                    <img
+                                      class="tech-icon"
+                                      v-bind:src="
+                                        require('@/assets/project1/' +
+                                          icon.filename)
+                                      "
+                                  /></span>
+                                </template>
+                                <span>{{ icon.label }}</span>
+                              </v-tooltip>
+                            </il>
+                          </ul>
+                        </div>
+                      </v-card-text>
+                      <v-card-actions class="justify-end">
+                        <v-btn text @click="dialog.value = false">Close</v-btn>
+                      </v-card-actions>
+                    </v-card>
+                  </template>
+                </v-dialog>
+              </div>
+            </v-col>
+          </v-row>
+          <v-row
+            justify="center"
+            class="hidden-md-and-up projectBackground2 mt-10"
+          >
+            <v-col cols="6" md="6">
+              <v-img src="../assets/leasemyride/leasemyride11.png"></v-img>
+            </v-col>
+            <v-col cols="6" md="6">
+              <div class="projectSubTitle">LeaseMyRide</div>
+              <div class="mb-8" style="font-size: .75rem;">
+                LeaseMyRide is a lease broker and lead aggregator. (Work In
+                Progress)
+              </div>
+              <div justify-center>
+                <v-dialog
+                  transition="dialog-bottom-transition"
+                  max-width="1500"
+                >
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn color="#fff" v-bind="attrs" v-on="on"
+                      >More Info</v-btn
+                    >
+                  </template>
+                  <template v-slot:default="dialog">
+                    <v-card>
+                      <v-toolbar color="blue lighten-3">LeaseMyRide</v-toolbar>
+                      <v-card-text>
+                        <div class="pa-6">
+                          LeaseMyRide is a lease broker and lead aggregator. The
+                          service provides clients easy access to brokers while
+                          increasing leads for brokers. The business model is
+                          planned to have a subcription service for brokers to
+                          allow for lead generation.
+                        </div>
+                        <div class="pa-6">Technologies used (Click icons)</div>
+                        <div>
+                          <ul
+                            class="iconContainer font"
+                            style="display: grid;grid-template-columns:repeat(3,1fr);"
+                          >
+                            <il v-for="icon in project1" :key="icon">
+                              <v-tooltip
+                                bottom
+                                color="#fff"
+                                offset-overflow="true"
+                                max-width="400px"
+                                size="50px"
+                                nudge-bottom="30"
+                              >
+                                <template v-slot:activator="{ on, attrs }">
+                                  <span
+                                    class="hvr-pulse"
+                                    v-bind="attrs"
+                                    v-on="on"
+                                  >
+                                    <img
+                                      class="tech-icon"
+                                      v-bind:src="
+                                        require('@/assets/project1/' +
+                                          icon.filename)
+                                      "
+                                  /></span>
+                                </template>
+                                <span>{{ icon.label }}</span>
+                              </v-tooltip>
+                            </il>
+                          </ul>
+                        </div>
+                      </v-card-text>
+                      <v-card-actions class="justify-end">
+                        <v-btn text @click="dialog.value = false">Close</v-btn>
+                      </v-card-actions>
+                    </v-card>
+                  </template>
+                </v-dialog>
+              </div>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+
+      <v-row class="" justify="center">
+        <v-col cols="12" md="6" class="">
+          <v-row class="hidden-sm-and-down projectBackground3" justify="center">
             <v-col cols="5" md="5">
               <carousel-3d
                 :autoplay="true"
@@ -268,7 +429,9 @@
                   </template>
                   <template v-slot:default="dialog">
                     <v-card>
-                      <v-toolbar color="#fff">CSUN Class Search</v-toolbar>
+                      <v-toolbar color="red lighten-2"
+                        >CSUN Class Search</v-toolbar
+                      >
                       <v-card-text>
                         <div class="pa-6">
                           This project was inspired by the complaints of the
@@ -319,7 +482,10 @@
               </div>
             </v-col>
           </v-row>
-          <v-row class="hidden-md-and-up" justify="center">
+          <v-row
+            class="hidden-md-and-up projectBackground3 mt-10"
+            justify="center"
+          >
             <v-col cols="6" md="6">
               <carousel-3d
                 :autoplay="true"
@@ -356,7 +522,9 @@
                   </template>
                   <template v-slot:default="dialog">
                     <v-card>
-                      <v-toolbar color="#fff">CSUN Class Search</v-toolbar>
+                      <v-toolbar color="red lighten-2"
+                        >CSUN Class Search</v-toolbar
+                      >
                       <v-card-text>
                         <div class="pa-6">
                           This project was inspired by the complaints of the
@@ -412,172 +580,11 @@
           </v-row>
         </v-col>
       </v-row>
-
-      <v-row class="" justify="center">
-        <v-col cols="12" md="6" class="">
-          <v-row
-            justify="center"
-            class="hidden-sm-and-down projectBackground mt-10"
-          >
-            <v-col cols="8" md="12">
-              <v-img src="../assets/leasemyride/leasemyride11.png"></v-img>
-            </v-col>
-            <v-col cols="4" md="4">
-              <div class="projectTitle">LeaseMyRide</div>
-              <div class="projectSubTitle mb-16">
-                LeaseMyRide is a lease broker and lead aggregator. (Work In
-                Progress)
-              </div>
-              <div justify-center>
-                <v-dialog transition="dialog-bottom-transition" max-width="750">
-                  <template v-slot:activator="{ on, attrs }">
-                    <v-btn color="#fff" v-bind="attrs" v-on="on"
-                      >More Info</v-btn
-                    >
-                  </template>
-                  <template v-slot:default="dialog">
-                    <v-card>
-                      <v-toolbar color="#fff"
-                        >LeaseMyRide (Work In Progress)</v-toolbar
-                      >
-                      <v-card-text>
-                        <div class="pa-6">
-                          LeaseMyRide is a lease broker and lead aggregator. The
-                          service provides clients easy access to brokers while
-                          increasing leads for brokers. The business model is
-                          planned to have a subcription service for brokers to
-                          allow for lead generation.
-                        </div>
-                        <div class="pa-6">
-                          Technologies used (Hover over icons)
-                        </div>
-                        <div>
-                          <ul class="iconContainer font">
-                            <il v-for="icon in project1" :key="icon">
-                              <v-tooltip
-                                bottom
-                                color="#fff"
-                                offset-overflow="true"
-                                max-width="400px"
-                                size="50px"
-                                nudge-bottom="30"
-                              >
-                                <template v-slot:activator="{ on, attrs }">
-                                  <span
-                                    class="hvr-pulse"
-                                    v-bind="attrs"
-                                    v-on="on"
-                                  >
-                                    <img
-                                      class="tech-icon"
-                                      v-bind:src="
-                                        require('@/assets/project1/' +
-                                          icon.filename)
-                                      "
-                                  /></span>
-                                </template>
-                                <span>{{ icon.label }}</span>
-                              </v-tooltip>
-                            </il>
-                          </ul>
-                        </div>
-                      </v-card-text>
-                      <v-card-actions class="justify-end">
-                        <v-btn text @click="dialog.value = false">Close</v-btn>
-                      </v-card-actions>
-                    </v-card>
-                  </template>
-                </v-dialog>
-              </div>
-            </v-col>
-          </v-row>
-          <v-row justify="center" class="hidden-md-and-up projectBackground">
-            <v-col cols="6" md="6">
-              <v-img src="../assets/leasemyride/leasemyride11.png"></v-img>
-            </v-col>
-            <v-col cols="6" md="6">
-              <div class="projectSubTitle">LeaseMyRide</div>
-              <div class="mb-8" style="font-size: .75rem;">
-                LeaseMyRide is a lease broker and lead aggregator. (Work In
-                Progress)
-              </div>
-              <div justify-center>
-                <v-dialog
-                  transition="dialog-bottom-transition"
-                  max-width="1500"
-                >
-                  <template v-slot:activator="{ on, attrs }">
-                    <v-btn color="#fff" v-bind="attrs" v-on="on"
-                      >More Info</v-btn
-                    >
-                  </template>
-                  <template v-slot:default="dialog">
-                    <v-card>
-                      <v-toolbar color="#fff">LeaseMyRide</v-toolbar>
-                      <v-card-text>
-                        <div class="pa-6">
-                          LeaseMyRide is a lease broker and lead aggregator. The
-                          service provides clients easy access to brokers while
-                          increasing leads for brokers. The business model is
-                          planned to have a subcription service for brokers to
-                          allow for lead generation.
-                        </div>
-                        <div class="pa-6">Technologies used (Click icons)</div>
-                        <div>
-                          <ul
-                            class="iconContainer font"
-                            style="display: grid;grid-template-columns:repeat(3,1fr);"
-                          >
-                            <il v-for="icon in project1" :key="icon">
-                              <v-tooltip
-                                bottom
-                                color="#fff"
-                                offset-overflow="true"
-                                max-width="400px"
-                                size="50px"
-                                nudge-bottom="30"
-                              >
-                                <template v-slot:activator="{ on, attrs }">
-                                  <span
-                                    class="hvr-pulse"
-                                    v-bind="attrs"
-                                    v-on="on"
-                                  >
-                                    <img
-                                      class="tech-icon"
-                                      v-bind:src="
-                                        require('@/assets/project1/' +
-                                          icon.filename)
-                                      "
-                                  /></span>
-                                </template>
-                                <span>{{ icon.label }}</span>
-                              </v-tooltip>
-                            </il>
-                          </ul>
-                        </div>
-                      </v-card-text>
-                      <v-card-actions class="justify-end">
-                        <v-btn text @click="dialog.value = false">Close</v-btn>
-                      </v-card-actions>
-                    </v-card>
-                  </template>
-                </v-dialog>
-              </div>
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
     </v-container>
     <v-container>
       <v-row class="mt-16">
         <v-col>
           <!-- <div class="intro mainIntro"><p>About Me</p></div> -->
-        </v-col>
-      </v-row>
-      <v-row class="mt-16">
-        <v-col>
-          <!-- <div class="intro mainIntro"><p>Download my resume</p></div> -->
         </v-col>
       </v-row>
     </v-container>
@@ -769,7 +776,12 @@ export default {
 .projectBackground {
   background-color: lightgray;
 }
-
+.projectBackground2 {
+  background-color: lightskyblue;
+}
+.projectBackground3 {
+  background-color: lightcoral;
+}
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 .font {
   font-family: "Nunito", sans-serif;
