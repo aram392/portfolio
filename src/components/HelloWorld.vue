@@ -452,13 +452,7 @@
           >
             <v-col cols="12" md="12">
  <div>
-               <model-fbx  :backgroundAlpha="0"         :rotation="rotation"  @on-load="onLoad"  :position="position"  :scale="scale" :antialias=true :logarithmicDepthBuffer=true :height="225" :width="325"
-            src="models/Frame21.fbx"
-            ></model-fbx>
-              </div>
-              <div >
-            Drag and Zoom
-            <v-icon>mdi-hand-right</v-icon>
+      <v-img src="../assets/frames/Frame1.png"></v-img>
 
             </div>
             </v-col>
