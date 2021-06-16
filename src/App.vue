@@ -50,34 +50,34 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import HelloWorld from './components/HelloWorld';
 
 export default {
-  name: "App",
+  name: 'App',
 
   components: {
     HelloWorld,
   },
   methods: {
     copyToClipboard(text) {
-      var dummy = document.createElement("textarea");
+      const dummy = document.createElement('textarea');
       document.body.appendChild(dummy);
       dummy.value = text;
       dummy.select();
-      document.execCommand("copy");
+      document.execCommand('copy');
       document.body.removeChild(dummy);
     },
   },
 
   data: () => ({
-    color: "#000000",
+    color: '#000000',
   }),
 };
 </script>
 
 <style>
 .apps {
-  background-color: #fff;
+  background-color: #faf5f5;
   background-position: right;
   background-size: 75%;
   background-position-y: top;
