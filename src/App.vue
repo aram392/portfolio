@@ -11,8 +11,20 @@
           value="arambalayan1@gmail.com"
           >arambalayan1@gmail.com
         </a>
-        <v-btn class="ma-6 hidden-sm-and-down">Github</v-btn>
-        <v-btn class="ma-6 hidden-sm-and-down">LinkedIn</v-btn>
+        <v-btn class="ma-6 hidden-sm-and-down"
+          ><a
+            style="text-decoration: none;"
+            href="https://www.github.com/aram392"
+            >Github</a
+          ></v-btn
+        >
+        <v-btn class="ma-6 hidden-sm-and-down"
+          ><a
+            style="text-decoration: none;"
+            href="https://www.linkedin.com/in/aram-balayan-95731b1aa/"
+            >LinkedIn</a
+          ></v-btn
+        >
         <v-dialog transition="dialog-bottom-transition" max-width="500">
           <template v-slot:activator="{ on, attrs }">
             <v-btn class="ma-6" color="#fff" v-bind="attrs" v-on="on"
@@ -50,27 +62,27 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import HelloWorld from "./components/HelloWorld";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
     HelloWorld,
   },
   methods: {
     copyToClipboard(text) {
-      const dummy = document.createElement('textarea');
+      const dummy = document.createElement("textarea");
       document.body.appendChild(dummy);
       dummy.value = text;
       dummy.select();
-      document.execCommand('copy');
+      document.execCommand("copy");
       document.body.removeChild(dummy);
     },
   },
 
   data: () => ({
-    color: '#000000',
+    color: "#000000",
   }),
 };
 </script>
