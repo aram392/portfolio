@@ -28,7 +28,7 @@
           <div class="intro mainIntro"><p>Projects</p></div>
         </v-col>
       </v-row>
-<!-- Meso -->
+      <!-- Meso -->
       <v-row class="" justify="center">
         <v-col cols="12" md="8" class="">
           <v-row class="hidden-sm-and-down projectBackground" justify="center">
@@ -86,7 +86,7 @@
                             health industry handles per diem workers.
                           </ul>
                           Our software allows a more streamlined way of
-                          sceduling on call workers. It can also be a tool used
+                          scheduling on call workers. It can also be a tool used
                           to find jobs in the health industry. The design of the
                           system was made using domain driven design. This
                           allows minimal restructuring for new features.
@@ -195,7 +195,10 @@
                         <div>
                           <ul
                             class="iconContainer font"
-                            style="display: grid;grid-template-columns:repeat(3,1fr);"
+                            style="
+                              display: grid;
+                              grid-template-columns: repeat(3, 1fr);
+                            "
                           >
                             <il v-for="icon in project2" :key="icon">
                               <v-tooltip
@@ -237,7 +240,7 @@
           </v-row>
         </v-col>
       </v-row>
-<!-- LeaseMy -->
+      <!-- LeaseMy -->
       <v-row class="" justify="center">
         <v-col cols="12" md="5" class="">
           <v-row
@@ -325,7 +328,7 @@
             </v-col>
             <v-col cols="6" md="6">
               <div class="projectSubTitle">LeaseMyRide</div>
-              <div class="mb-8" style="font-size: .75rem;">
+              <div class="mb-8" style="font-size: 0.75rem">
                 LeaseMyRide is a lease broker and lead aggregator. (Work In
                 Progress)
               </div>
@@ -354,7 +357,10 @@
                         <div>
                           <ul
                             class="iconContainer font"
-                            style="display: grid;grid-template-columns:repeat(3,1fr);"
+                            style="
+                              display: grid;
+                              grid-template-columns: repeat(3, 1fr);
+                            "
                           >
                             <il v-for="icon in project1" :key="icon">
                               <v-tooltip
@@ -397,27 +403,37 @@
         </v-col>
       </v-row>
 
-<!-- Photo Frame -->
+      <!-- Photo Frame -->
       <v-row class="" justify="center">
         <v-col cols="12" md="8" class="">
           <v-row class="hidden-sm-and-down projectBackground4" justify="center">
             <v-col cols="7" md="7">
               <div>
-               <model-fbx  :backgroundAlpha="0"         :rotation="rotation"  @on-load="onLoad"  :position="position"  :scale="scale" :antialias=true :logarithmicDepthBuffer=true :height="400" :width="600"
-            src="models/Frame21.fbx"
-            ></model-fbx>
+                <model-fbx
+                  :backgroundAlpha="0"
+                  :rotation="rotation"
+                  @on-load="onLoad"
+                  :position="position"
+                  :scale="scale"
+                  :antialias="true"
+                  :logarithmicDepthBuffer="true"
+                  :height="400"
+                  :width="600"
+                  src="models/Frame21.fbx"
+                ></model-fbx>
               </div>
-              <div >
-            Drag Me
-            <v-icon>mdi-hand-right</v-icon>
-            Zoom
-            <v-icon>mdi-arrow-expand-vertical</v-icon>
-            </div>
+              <div>
+                Drag Me
+                <v-icon>mdi-hand-right</v-icon>
+                Zoom
+                <v-icon>mdi-arrow-expand-vertical</v-icon>
+              </div>
             </v-col>
             <v-col cols="5" md="5">
               <div class="projectTitle">Digital Collage Frame</div>
               <div class="projectSubTitle mb-16">
-                Using multiple raspberry pi devices connected to the network to create a digital frame that automatically updates images.
+                Using multiple raspberry pi devices connected to the network to
+                create a digital frame that automatically updates images.
               </div>
               <div justify-center>
                 <v-dialog transition="dialog-bottom-transition" max-width="750">
@@ -433,7 +449,15 @@
                       >
                       <v-card-text>
                         <div class="pa-6">
-                          This project allowed me to combine hardware and software into a real piece of art. The frame is completely made from scratch (cut, painted and polished). I chose a lightweight linux distro that allowed fast boot up. The devices are connected to the network but run on a separate local network for privacy reasons. I set it up so future features like having Google Drive syncing of images can be easily added.
+                          This project allowed me to combine hardware and
+                          software into a real piece of art. The frame is
+                          completely made from scratch (cut, painted and
+                          polished). I chose a lightweight linux distro that
+                          allowed fast boot up. The devices are connected to the
+                          network but run on a separate local network for
+                          privacy reasons. I set it up so future features like
+                          having Google Drive syncing of images can be easily
+                          added.
                         </div>
                         <v-img src="../assets/frames/Frames.jpg"></v-img>
                       </v-card-text>
@@ -451,15 +475,15 @@
             justify="center"
           >
             <v-col cols="12" md="12">
- <div>
-      <v-img src="../assets/frames/Frame1.png"></v-img>
-
-            </div>
+              <div>
+                <v-img src="../assets/frames/Frame1.png"></v-img>
+              </div>
             </v-col>
             <v-col cols="12" md="12">
               <div class="projectSubTitle">Digital Collage Frame</div>
               <div class="projectSubTitleMobile mb-8">
-               Using multiple raspberry pi devices connected to the network to create a digital frame that automatically updates images.
+                Using multiple raspberry pi devices connected to the network to
+                create a digital frame that automatically updates images.
               </div>
               <div justify-center>
                 <v-dialog
@@ -477,11 +501,18 @@
                         >Digital Photo Frame</v-toolbar
                       >
                       <v-card-text>
-                          <div class="pa-6">
-                          This project allowed me to combine hardware and software into a real piece of art. The frame is completely made from scratch (cut, painted and polished). I chose a lightweight linux distro that allowed fast boot up. The devices are connected to the network but run on a separate local network for privacy reasons. I set it up so future features like having Google Drive syncing of images can be easily added.
+                        <div class="pa-6">
+                          This project allowed me to combine hardware and
+                          software into a real piece of art. The frame is
+                          completely made from scratch (cut, painted and
+                          polished). I chose a lightweight linux distro that
+                          allowed fast boot up. The devices are connected to the
+                          network but run on a separate local network for
+                          privacy reasons. I set it up so future features like
+                          having Google Drive syncing of images can be easily
+                          added.
                         </div>
                         <v-img src="../assets/frames/Frames.jpg"></v-img>
-
                       </v-card-text>
                       <v-card-actions class="justify-end">
                         <v-btn text @click="dialog.value = false">Close</v-btn>
@@ -495,10 +526,13 @@
         </v-col>
       </v-row>
 
-<!-- Csun Redesign -->
+      <!-- Csun Redesign -->
       <v-row class="" justify="center">
         <v-col cols="12" md="6" class="">
-          <v-row class="hidden-sm-and-down projectBackground3 mt-10 mb-10" justify="center">
+          <v-row
+            class="hidden-sm-and-down projectBackground3 mt-10 mb-10"
+            justify="center"
+          >
             <v-col cols="5" md="5">
               <carousel-3d
                 :autoplay="true"
@@ -635,13 +669,14 @@
                           about Javascript and Vue helped change an already
                           existing system to a proof of concept.
                         </div>
-                        <div class="pa-6">
-                          Technologies used (Click icons)
-                        </div>
+                        <div class="pa-6">Technologies used (Click icons)</div>
                         <div>
                           <ul
                             class="iconContainer font"
-                            style="display: grid;grid-template-columns:repeat(3,1fr);"
+                            style="
+                              display: grid;
+                              grid-template-columns: repeat(3, 1fr);
+                            "
                           >
                             <il v-for="icon in project1" :key="icon">
                               <v-tooltip
@@ -686,8 +721,7 @@
     </v-container>
     <v-container>
       <v-row class="mt-16 mb-0" justify="center">
-        <v-col >
-
+        <v-col>
           <!-- <div class="intro mainIntro"><p>About Me</p></div> -->
         </v-col>
       </v-row>
@@ -696,14 +730,14 @@
 </template>
 
 <script>
-import { ModelFbx } from 'vue-3d-model';
+import { ModelFbx } from "vue-3d-model";
 
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   components: { ModelFbx },
   methods: {
     copyToClipboard(text) {
-      const dummy = document.createElement('textarea');
+      const dummy = document.createElement("textarea");
       // to avoid breaking orgain page when copying more words
       // cant copy when adding below this code
       // dummy.style.display = 'none'
@@ -711,7 +745,7 @@ export default {
       // Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
       dummy.value = text;
       dummy.select();
-      document.execCommand('copy');
+      document.execCommand("copy");
       document.body.removeChild(dummy);
     },
     onLoad() {
@@ -725,22 +759,21 @@ export default {
   computed: {
     height() {
       switch (this.$vuetify.breakpoint.name) {
-        case 'xs':
+        case "xs":
           return 220;
-        case 'sm':
+        case "sm":
           return 400;
-        case 'md':
+        case "md":
           return 500;
-        case 'lg':
+        case "lg":
           return 600;
-        case 'xl':
+        case "xl":
           return 800;
       }
     },
   },
   data() {
     return {
-
       rotation: {
         x: 0,
         y: 0,
@@ -753,62 +786,62 @@ export default {
       hoverNotify: false,
       project1: [
         {
-          filename: 'go.png',
+          filename: "go.png",
           label:
-            'Golang was used for creating RESTful services. This includes all features relating to login, account creation, password recovery and site content.',
+            "Golang was used for creating RESTful services. This includes all features relating to login, account creation, password recovery and site content.",
         },
         {
-          filename: 'vue.png',
+          filename: "vue.png",
           label:
-            'Vue.js was chosen since I am familiar with this framework. It allowed me to spend more time building backend services.',
+            "Vue.js was chosen since I am familiar with this framework. It allowed me to spend more time building backend services.",
         },
         {
-          filename: 'docker.png',
+          filename: "docker.png",
           label:
-            'Docker was used for containerization of microservices. For example the backend can be spun up with once docker command and it makes it easy to test on the fly.',
+            "Docker was used for containerization of microservices. For example the backend can be spun up with once docker command and it makes it easy to test on the fly.",
         },
         {
-          filename: 'postgres.png',
+          filename: "postgres.png",
           label:
-            'Postgres was used since it is a great open source database management tool.',
+            "Postgres was used since it is a great open source database management tool.",
         },
       ],
       project2: [
         {
-          filename: 'go.png',
+          filename: "go.png",
           label:
-            'Golang was used for backend services as it has a robust support for creating RESTful services and building out large applications with ease.',
+            "Golang was used for backend services as it has a robust support for creating RESTful services and building out large applications with ease.",
         },
         {
-          filename: 'vue.png',
+          filename: "vue.png",
           label:
-            'Vue.js is a great framework to build out large pages with multiple components. It allowed our team to take our Figma prototypes and create exact copy components.',
+            "Vue.js is a great framework to build out large pages with multiple components. It allowed our team to take our Figma prototypes and create exact copy components.",
         },
         {
-          filename: 'docker.png',
+          filename: "docker.png",
           label:
-            'Docker was used for containerization of microservices. It allows services to run decoupled and services can be created independently.',
+            "Docker was used for containerization of microservices. It allows services to run decoupled and services can be created independently.",
         },
         {
-          filename: 'postgres.png',
+          filename: "postgres.png",
           label:
-            'Postgres was used since it is a great open source database management tool.',
+            "Postgres was used since it is a great open source database management tool.",
         },
         {
-          filename: 'nuclino.png',
+          filename: "nuclino.png",
           label:
-            'Nuclino was used to organize features of services and provide documentation for endpoints.',
+            "Nuclino was used to organize features of services and provide documentation for endpoints.",
         },
       ],
       project3: [
         {
-          filename: 'vue.png',
+          filename: "vue.png",
           label:
-            'Used to give a responsive update. The issue of pages being reloaded after each click is now fixed with Vue.',
+            "Used to give a responsive update. The issue of pages being reloaded after each click is now fixed with Vue.",
         },
         {
-          filename: 'python.svg',
-          label: 'Used to gather class names from API and convert to JSON.',
+          filename: "python.svg",
+          label: "Used to gather class names from API and convert to JSON.",
         },
       ],
     };
@@ -905,10 +938,8 @@ export default {
   background-color: lightcoral;
 }
 
-.projectBackground4
-{
-    background-color: lightslategray;
-
+.projectBackground4 {
+  background-color: lightslategray;
 }
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 .font {
