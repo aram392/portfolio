@@ -13,7 +13,7 @@
           >
             Software Engineer
           </div>
-          <div class="aboutme">
+          <div class="aboutme animate__animated animate__fadeInDown">
             Im from Los Angeles and enjoy developing software applications from
             backend to frontend. I am a great addition to your engineering team
             just let me get my coffee first ☕.
@@ -37,7 +37,7 @@
                 :autoplay="true"
                 :height="500"
                 :width="250"
-                :autoplayTimeout="4000"
+                :autoplayTimeout="2500"
                 :autoplayHoverPause="true"
                 :perspective="30"
                 :inverseScaling="400"
@@ -70,7 +70,7 @@
               <div justify-center>
                 <v-dialog transition="dialog-bottom-transition" max-width="750">
                   <template v-slot:activator="{ on, attrs }">
-                    <v-btn color="#fff" v-bind="attrs" v-on="on"
+                    <v-btn color="#f5e2c8" v-bind="attrs" v-on="on"
                       >More Info</v-btn
                     >
                   </template>
@@ -174,7 +174,7 @@
                   max-width="1500"
                 >
                   <template v-slot:activator="{ on, attrs }">
-                    <v-btn color="#fff" v-bind="attrs" v-on="on"
+                    <v-btn color="#f5e2c8" v-bind="attrs" v-on="on"
                       >More Info</v-btn
                     >
                   </template>
@@ -259,7 +259,7 @@
               <div justify-center>
                 <v-dialog transition="dialog-bottom-transition" max-width="750">
                   <template v-slot:activator="{ on, attrs }">
-                    <v-btn color="#fff" v-bind="attrs" v-on="on"
+                    <v-btn color="#f5e2c8" v-bind="attrs" v-on="on"
                       >More Info</v-btn
                     >
                   </template>
@@ -338,7 +338,7 @@
                   max-width="1500"
                 >
                   <template v-slot:activator="{ on, attrs }">
-                    <v-btn color="#fff" v-bind="attrs" v-on="on"
+                    <v-btn color="#f5e2c8" v-bind="attrs" v-on="on"
                       >More Info</v-btn
                     >
                   </template>
@@ -438,7 +438,7 @@
               <div justify-center>
                 <v-dialog transition="dialog-bottom-transition" max-width="750">
                   <template v-slot:activator="{ on, attrs }">
-                    <v-btn color="#fff" v-bind="attrs" v-on="on"
+                    <v-btn color="#f5e2c8" v-bind="attrs" v-on="on"
                       >More Info</v-btn
                     >
                   </template>
@@ -491,7 +491,7 @@
                   max-width="1500"
                 >
                   <template v-slot:activator="{ on, attrs }">
-                    <v-btn color="#fff" v-bind="attrs" v-on="on"
+                    <v-btn color="#f5e2c8" v-bind="attrs" v-on="on"
                       >More Info</v-btn
                     >
                   </template>
@@ -560,7 +560,7 @@
               <div justify-center>
                 <v-dialog transition="dialog-bottom-transition" max-width="750">
                   <template v-slot:activator="{ on, attrs }">
-                    <v-btn color="#fff" v-bind="attrs" v-on="on"
+                    <v-btn color="#f5e2c8" v-bind="attrs" v-on="on"
                       >More Info</v-btn
                     >
                   </template>
@@ -628,10 +628,10 @@
                 :autoplay="true"
                 :height="500"
                 :width="250"
-                :autoplayTimeout="5000"
+                :autoplayTimeout="2000"
                 :display="1"
                 :inverseScaling="1"
-                :autoplayHoverPause="true"
+                :autoplayHoverPause="false"
               >
                 <slide :index="0">
                   <v-img src="../assets/csun/iphonexcsun1.png"></v-img>
@@ -653,7 +653,7 @@
                   max-width="1500"
                 >
                   <template v-slot:activator="{ on, attrs }">
-                    <v-btn color="#fff" v-bind="attrs" v-on="on"
+                    <v-btn color="#f5e2c8" v-bind="attrs" v-on="on"
                       >More Info</v-btn
                     >
                   </template>
@@ -915,6 +915,9 @@ export default {
   font-size: 300%;
   width: 2rem;
 }
+.asset-shadow {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
 .project {
   height: 20rem;
@@ -930,16 +933,24 @@ export default {
 }
 .projectBackground {
   background-color: lightgray;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .projectBackground2 {
   background-color: lightskyblue;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .projectBackground3 {
   background-color: lightcoral;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .projectBackground4 {
   background-color: lightslategray;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 .font {
