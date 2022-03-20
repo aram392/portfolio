@@ -14,8 +14,8 @@
             Software Engineer
           </div>
           <div class="aboutme animate__animated animate__fadeInDown">
-            Im from Los Angeles and enjoy developing software applications from
-            backend to frontend. I am a great addition to your engineering team
+            I am from Los Angeles and enjoy developing software applications from
+            backend to frontend. I am a great addition to your engineering team,
             just let me get my coffee first ☕.
           </div>
         </v-col>
@@ -30,7 +30,7 @@
       </v-row>
       <!-- Meso -->
       <v-row class="" justify="center">
-        <v-col cols="12" md="8" class="">
+        <v-col cols="12" md="10" class="">
           <v-row class="hidden-sm-and-down projectBackground" justify="center">
             <v-col cols="8" md="8">
               <carousel-3d
@@ -242,7 +242,7 @@
       </v-row>
       <!-- LeaseMy -->
       <v-row class="" justify="center">
-        <v-col cols="12" md="5" class="">
+        <v-col cols="12" md="8" class="">
           <v-row
             justify="center"
             class="hidden-sm-and-down projectBackground2 mt-10 mb-10"
@@ -405,9 +405,9 @@
 
       <!-- Photo Frame -->
       <v-row class="" justify="center">
-        <v-col cols="12" md="8" class="">
+        <v-col cols="12" md="10" class="">
           <v-row class="hidden-sm-and-down projectBackground4" justify="center">
-            <v-col cols="7" md="7">
+            <v-col cols="7" md="8">
               <div>
                 <model-fbx
                   :backgroundAlpha="0"
@@ -429,7 +429,7 @@
                 <v-icon>mdi-arrow-expand-vertical</v-icon>
               </div>
             </v-col>
-            <v-col cols="5" md="5">
+            <v-col cols="5" md="4">
               <div class="projectTitle">Digital Collage Frame</div>
               <div class="projectSubTitle mb-16">
                 Using multiple raspberry pi devices connected to the network to
@@ -528,7 +528,7 @@
 
       <!-- Csun Redesign -->
       <v-row class="" justify="center">
-        <v-col cols="12" md="6" class="">
+        <v-col cols="12" md="7" class="">
           <v-row
             class="hidden-sm-and-down projectBackground3 mt-10 mb-10"
             justify="center"
@@ -730,14 +730,14 @@
 </template>
 
 <script>
-import { ModelFbx } from "vue-3d-model";
+import { ModelFbx } from 'vue-3d-model';
 
 export default {
-  name: "HelloWorld",
+  name: 'HelloWorld',
   components: { ModelFbx },
   methods: {
     copyToClipboard(text) {
-      const dummy = document.createElement("textarea");
+      const dummy = document.createElement('textarea');
       // to avoid breaking orgain page when copying more words
       // cant copy when adding below this code
       // dummy.style.display = 'none'
@@ -745,7 +745,7 @@ export default {
       // Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
       dummy.value = text;
       dummy.select();
-      document.execCommand("copy");
+      document.execCommand('copy');
       document.body.removeChild(dummy);
     },
     onLoad() {
@@ -759,15 +759,15 @@ export default {
   computed: {
     height() {
       switch (this.$vuetify.breakpoint.name) {
-        case "xs":
+        case 'xs':
           return 220;
-        case "sm":
+        case 'sm':
           return 400;
-        case "md":
+        case 'md':
           return 500;
-        case "lg":
+        case 'lg':
           return 600;
-        case "xl":
+        case 'xl':
           return 800;
       }
     },
@@ -786,62 +786,62 @@ export default {
       hoverNotify: false,
       project1: [
         {
-          filename: "go.png",
+          filename: 'go.png',
           label:
-            "Golang was used for creating RESTful services. This includes all features relating to login, account creation, password recovery and site content.",
+            'Golang was used for creating RESTful services. This includes all features relating to login, account creation, password recovery and site content.',
         },
         {
-          filename: "vue.png",
+          filename: 'vue.png',
           label:
-            "Vue.js was chosen since I am familiar with this framework. It allowed me to spend more time building backend services.",
+            'Vue.js was chosen since I am familiar with this framework. It allowed me to spend more time building backend services.',
         },
         {
-          filename: "docker.png",
+          filename: 'docker.png',
           label:
-            "Docker was used for containerization of microservices. For example the backend can be spun up with once docker command and it makes it easy to test on the fly.",
+            'Docker was used for containerization of microservices. For example the backend can be spun up with once docker command and it makes it easy to test on the fly.',
         },
         {
-          filename: "postgres.png",
+          filename: 'postgres.png',
           label:
-            "Postgres was used since it is a great open source database management tool.",
+            'Postgres was used since it is a great open source database management tool.',
         },
       ],
       project2: [
         {
-          filename: "go.png",
+          filename: 'go.png',
           label:
-            "Golang was used for backend services as it has a robust support for creating RESTful services and building out large applications with ease.",
+            'Golang was used for backend services as it has a robust support for creating RESTful services and building out large applications with ease.',
         },
         {
-          filename: "vue.png",
+          filename: 'vue.png',
           label:
-            "Vue.js is a great framework to build out large pages with multiple components. It allowed our team to take our Figma prototypes and create exact copy components.",
+            'Vue.js is a great framework to build out large pages with multiple components. It allowed our team to take our Figma prototypes and create exact copy components.',
         },
         {
-          filename: "docker.png",
+          filename: 'docker.png',
           label:
-            "Docker was used for containerization of microservices. It allows services to run decoupled and services can be created independently.",
+            'Docker was used for containerization of microservices. It allows services to run decoupled and services can be created independently.',
         },
         {
-          filename: "postgres.png",
+          filename: 'postgres.png',
           label:
-            "Postgres was used since it is a great open source database management tool.",
+            'Postgres was used since it is a great open source database management tool.',
         },
         {
-          filename: "nuclino.png",
+          filename: 'nuclino.png',
           label:
-            "Nuclino was used to organize features of services and provide documentation for endpoints.",
+            'Nuclino was used to organize features of services and provide documentation for endpoints.',
         },
       ],
       project3: [
         {
-          filename: "vue.png",
+          filename: 'vue.png',
           label:
-            "Used to give a responsive update. The issue of pages being reloaded after each click is now fixed with Vue.",
+            'Used to give a responsive update. The issue of pages being reloaded after each click is now fixed with Vue.',
         },
         {
-          filename: "python.svg",
-          label: "Used to gather class names from API and convert to JSON.",
+          filename: 'python.svg',
+          label: 'Used to gather class names from API and convert to JSON.',
         },
       ],
     };
@@ -885,6 +885,14 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   color: black;
+}
+.coffeeVideo{
+  /* filter: blur(2px);
+  -webkit-filter: blur(2px); */
+  box-shadow: 0px 0px 100px #000000;
+  width: 5rem;
+  position: absolute;
+
 }
 
 .contact {

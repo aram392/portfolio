@@ -3,6 +3,9 @@
     <v-main class="apps">
       <v-app-bar dark absolute class="font" color="#28262C "
         >Aram Balayan
+        <video autoplay loop muted class="coffeeVideo">
+              <source src="./assets/video.mp4">
+        </video>
         <v-spacer></v-spacer>
         <a
           class="contact font ma-6 hidden-sm-and-down"
@@ -63,27 +66,27 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import HelloWorld from './components/HelloWorld';
 
 export default {
-  name: "App",
+  name: 'App',
 
   components: {
     HelloWorld,
   },
   methods: {
     copyToClipboard(text) {
-      const dummy = document.createElement("textarea");
+      const dummy = document.createElement('textarea');
       document.body.appendChild(dummy);
       dummy.value = text;
       dummy.select();
-      document.execCommand("copy");
+      document.execCommand('copy');
       document.body.removeChild(dummy);
     },
   },
 
   data: () => ({
-    color: "#000000",
+    color: '#000000',
   }),
 };
 </script>
@@ -108,5 +111,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   color: white;
+}
+.coffeeVideo{
+  width: 3rem;
+  border-radius: 50%;
+  padding-left: 10px;
+
 }
 </style>
