@@ -8,7 +8,7 @@ import VueAnalytics from 'vue-analytics';
 
 Vue.use(Carousel3d);
 Vue.use(VueAnalytics, {
-  id: 'G-HL7HGMDH6C',
+  id: 'G-XZTETM4PHD',
 });
 Vue.config.productionTip = false;
 
