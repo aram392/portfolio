@@ -530,7 +530,7 @@
       <v-row class="" justify="center">
         <v-col cols="12" md="7" class="">
           <v-row
-            class="hidden-sm-and-down projectBackground3 mt-10 mb-10"
+            class="hidden-sm-and-down projectBackground3 mt-10"
             justify="center"
           >
             <v-col cols="5" md="5">
@@ -718,6 +718,201 @@
           </v-row>
         </v-col>
       </v-row>
+
+      <!-- TicTacToe Application -->
+      <v-row class="" justify="center">
+        <v-col cols="12" md="7" class="">
+          <v-row
+            class="hidden-sm-and-down projectBackground mt-10"
+            justify="center"
+          >
+            <v-col cols="5" md="5">
+              <v-img   contain
+              height="80%"
+              width="80%"
+              src="../assets/tictactoe/tictactoe.png"></v-img>
+            </v-col>
+            <v-col cols="7" md="7">
+              <div class="projectTitle">TicTacToe Online</div>
+              <div class="projectSubTitle mb-16">
+                Using websockets with Node.js I created a realtime game server.
+              </div>
+              <div justify-center>
+                <v-dialog transition="dialog-bottom-transition" max-width="750">
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn color="#f5e2c8" v-bind="attrs" v-on="on"
+                      >More Info</v-btn
+                    >
+                  </template>
+                  <template v-slot:default="dialog">
+                    <v-card>
+                      <v-toolbar color="grey"
+                        >TicTacToe Online</v-toolbar
+                      >
+                      <v-card-text>
+                        <div class="pa-6">
+                          I designed the server to accept events (moves) from the players. The game only allows correct moves and the state only changes from the server. This keeps the game prone from cheaters.
+                        </div>
+
+                        <div class="pa-6">
+                          <a href="https://youtu.be/VUNzkrHliPY">See the demo</a>
+                          <div></div>
+                          <a href="https://github.com/aram392/tictactoe-react-node/tree/websocket">See the code</a>
+                        </div>
+                      </v-card-text>
+                      <v-card-actions class="justify-end">
+                        <v-btn text @click="dialog.value = false">Close</v-btn>
+                      </v-card-actions>
+                    </v-card>
+                  </template>
+                </v-dialog>
+              </div>
+            </v-col>
+          </v-row>
+          <v-row
+            class="hidden-md-and-up projectBackground mt-10"
+            justify="center"
+          >
+            <v-col cols="6" md="6">
+              <v-img src="../assets/tictactoe/tictactoe.png"></v-img>
+            </v-col>
+            <v-col cols="6" md="6">
+              <div class="projectSubTitle">TicTacToe Online</div>
+              <div class="projectSubTitleMobile mb-8">
+                Using websockets with Node.js I created a realtime game server.
+              </div>
+              <div justify-center>
+                <v-dialog
+                  transition="dialog-bottom-transition"
+                  max-width="1500"
+                >
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn color="#f5e2c8" v-bind="attrs" v-on="on"
+                      >More Info</v-btn
+                    >
+                  </template>
+                  <template v-slot:default="dialog">
+                    <v-card>
+                      <v-toolbar  color="grey"
+                        >TicTacToe Online</v-toolbar
+                      >
+                      <v-card-text>
+                        <div class="pa-6">
+                          I designed the server to accept events (moves) from the players. The game only allows correct moves and the state only changes from the server. This keeps the game prone from cheaters.
+                        </div>
+                        <div class="pa-6">
+                          <a href="https://youtu.be/VUNzkrHliPY">See the demo</a>
+                          <div></div>
+                          <a href="https://github.com/aram392/tictactoe-react-node/tree/websocket">See the code</a>
+
+                        </div>
+                      </v-card-text>
+                      <v-card-actions class="justify-end">
+                        <v-btn text @click="dialog.value = false">Close</v-btn>
+                      </v-card-actions>
+                    </v-card>
+                  </template>
+                </v-dialog>
+              </div>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+
+      <!-- Notes Application -->
+      <v-row class="" justify="center">
+        <v-col cols="12" md="7" class="">
+          <v-row
+            class="hidden-sm-and-down projectBackground2 mt-10 mb-10"
+            justify="center"
+          >
+            <v-col cols="5" md="5">
+              <v-img contain
+              height="90%"
+              width="90%" src="../assets/notes/notes.png"></v-img>
+            </v-col>
+            <v-col cols="7" md="7">
+              <div class="projectTitle">Fullstack Note App</div>
+              <div class="projectSubTitle mb-16">
+                Learning the concepts of React while putting it all together with MongoDB and Node.
+              </div>
+              <div justify-center>
+                <v-dialog transition="dialog-bottom-transition" max-width="750">
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn color="#f5e2c8" v-bind="attrs" v-on="on"
+                      >More Info</v-btn
+                    >
+                  </template>
+                  <template v-slot:default="dialog">
+                    <v-card>
+                      <v-toolbar color="blue lighten-3"
+                        >Notes Application</v-toolbar
+                      >
+                      <v-card-text>
+                        <div class="pa-6">
+                          I used this project to understand React hooks and learn Node.js. I also made testing files to make use of Jest a Javascript testing framework.
+                        </div>
+
+                        <div class="pa-6">
+                          <a href="https://damp-tor-61384.herokuapp.com/">Visit the page here</a>
+                        </div>
+                      </v-card-text>
+                      <v-card-actions class="justify-end">
+                        <v-btn text @click="dialog.value = false">Close</v-btn>
+                      </v-card-actions>
+                    </v-card>
+                  </template>
+                </v-dialog>
+              </div>
+            </v-col>
+          </v-row>
+          <v-row
+            class="hidden-md-and-up projectBackground2 mt-10"
+            justify="center"
+          >
+            <v-col cols="6" md="6">
+              <v-img src="../assets/notes/notes.png"></v-img>
+            </v-col>
+            <v-col cols="6" md="6">
+              <div class="projectSubTitle">Notes Application</div>
+              <div class="projectSubTitleMobile mb-8">
+                I used this project to understand React hooks and learn Node.js. I also made testing files to make use of Jest a Javascript testing framework.
+              </div>
+              <div justify-center>
+                <v-dialog
+                  transition="dialog-bottom-transition"
+                  max-width="1500"
+                >
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn color="#f5e2c8" v-bind="attrs" v-on="on"
+                      >More Info</v-btn
+                    >
+                  </template>
+                  <template v-slot:default="dialog">
+                    <v-card>
+                      <v-toolbar color="blue lighten-3"
+                        >Notes Application</v-toolbar
+                      >
+                      <v-card-text>
+                        <div class="pa-6">
+                          I used this project to understand React hooks and learn Node.js. I also made testing files to make use of Jest a Javascript testing framework.
+                        </div>
+                        <div class="pa-6">
+                          <a href="https://damp-tor-61384.herokuapp.com/">Visit the page here</a>
+                        </div>
+                      </v-card-text>
+                      <v-card-actions class="justify-end">
+                        <v-btn text @click="dialog.value = false">Close</v-btn>
+                      </v-card-actions>
+                    </v-card>
+                  </template>
+                </v-dialog>
+              </div>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+
     </v-container>
     <v-container>
       <v-row class="mt-16 mb-0" justify="center">
