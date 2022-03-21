@@ -4,13 +4,13 @@ import vuetify from './plugins/vuetify';
 import 'animate.css';
 import Hover from 'hover.css';
 import Carousel3d from 'vue-carousel-3d';
-import VueAnalytics from 'vue-analytics';
+import VueGtag from 'vue-gtag';
 
 Vue.use(Carousel3d);
-Vue.use(VueAnalytics, {
-  id: 'G-XZTETM4PHD',
+
+Vue.use(VueGtag, {
+  config: { id: 'G-XZTETM4PHD' },
 });
-Vue.config.productionTip = false;
 
 new Vue({
   vuetify,
